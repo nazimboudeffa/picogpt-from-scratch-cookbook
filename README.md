@@ -1,4 +1,4 @@
-# De LLMs from Scratch à PicoGPT1-Daisy
+# De LLMs from Scratch à PicoGPT1
 
 ## Construire un mini modèle de langage avec l'aide de l'intelligence artificielle
 
