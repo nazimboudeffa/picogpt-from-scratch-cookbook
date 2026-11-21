@@ -134,16 +134,21 @@ Le 21 novembre, le projet change de stratégie : au lieu d'apprendre la langue
 depuis des poids aléatoires sur quelques milliers d'exemples, il part de
 **GPT-2 pré-entraîné** et se contente d'un ajustement (*fine-tuning*).
 
-| | Première époque (`scratch`) | Époque actuelle (`pretrained`) |
+| | Première époque (2 couches / 128 dims) | Époque actuelle (`pretrained`) |
 | --- | --- | --- |
-| Commande | `python train.py --init scratch` | `python train.py` |
+| Commande | Aucune option CLI (configuration dans `train.py`) | `python train.py` |
 | Poids de départ | Aléatoires | `gpt2` (124 M paramètres) |
-| Architecture | 4 couches, 256 dimensions, 4 têtes | 12 couches, 768 dimensions, 12 têtes |
+| Architecture | 2 couches, 128 dimensions, 2 têtes | 12 couches, 768 dimensions, 12 têtes |
 | Paramètres | ≈ 6,86 M | 124 439 808 |
 | Exemples | 745 (500 + 245) | 2 442 (2 000 + 245 + 197) |
 | Époques de référence | 10 | 5 |
 | Loss rapportée | ≈ 4,54 | 1,58 en moyenne, ≈ 1,05 en fin de course |
 | Matériel | CPU | RTX 3070, CUDA + `--fp16`, 250,8 s |
+
+**À ne pas confondre.** L'option `--init scratch`, ajoutée au commit `12c8df5`,
+ne reproduit pas la première époque : elle utilise 4 couches / 256 dimensions /
+4 têtes, soit ≈ 16,1 M paramètres (`doc/09-architecture.md`). C'est un outil
+de comparaison rétrospectif, pas un retour en arrière.
 
 Le code lui-même conserve la mémoire des deux époques. L'en-tête de
 `train.py` (lignes 1-12) l'explique sans détour :
@@ -180,9 +185,10 @@ un entraînement naïf, puis comparer.
 
 ## 1.5 Le parcours du lecteur
 
-La séquence complète, telle qu'elle est documentée dans `doc/README.md`,
-tient en sept commandes. Elle suppose le dépôt cloné et l'environnement
-virtuel activé (chapitre 4).
+La séquence complète tient en huit commandes dans le bloc ci-dessous. Le
+`doc/README.md` de `320a572` en affiche sept et présente `python serve.py`
+séparément. Elle suppose le dépôt cloné et l'environnement virtuel activé
+(chapitre 4).
 
 ```bash
 python -m pip install torch transformers datasets huggingface_hub scikit-learn
@@ -224,10 +230,11 @@ git log --format='%h %ad %s' --date=short --reverse
 # Compter les faits de la base fermée (30 lignes attendues)
 (Get-Content knowledge.jsonl | Where-Object { $_.Trim() }).Count
 
-# Compter les exemples de chaque jeu généré
-(Get-Content train.txt | Where-Object { $_ -match '^$' }).Count
-(Get-Content rag_train.txt | Where-Object { $_ -match '^$' }).Count
-(Get-Content facts_train.txt | Where-Object { $_ -match '^$' }).Count
+# Compter les exemples de chaque jeu généré : les scripts écrivent une ligne
+# vide ENTRE les blocs, donc n exemples donnent n-1 lignes vides (d'où le + 1).
+(Get-Content train.txt | Where-Object { $_ -match '^$' }).Count + 1
+(Get-Content rag_train.txt | Where-Object { $_ -match '^$' }).Count + 1
+(Get-Content facts_train.txt | Where-Object { $_ -match '^$' }).Count + 1
 
 # Voir les options réellement disponibles pour l'entraînement
 python train.py --help
@@ -248,12 +255,13 @@ python train.py --help
 - L'idée vient de *LLMs from Scratch*, puis passe par `picogpt-python` (juin
   2025, architecture écrite à la main) et `picogpt1-scratch-python` (avril
   2026, premier modèle avec l'IA) avant Jasmine et Daisy.
-- La chaîne compte **neuf étapes**, chacune isolée dans un script et une
-  fiche `doc/`.
+- La chaîne compte **neuf étapes** et **treize fichiers** (certaines étapes en
+  regroupent plusieurs), décrits dans douze fiches `doc/` et un index.
 - Les données sont de deux natures : une **base fermée versionnée**
   (`knowledge.jsonl`) et des **jeux générés** non versionnés.
-- Le projet a connu **deux époques** : 6,86 M paramètres depuis zéro, puis
-  124 M par ajustement de GPT-2. Les deux restent reproductibles.
+- Le projet a connu **deux époques** : 6,86 M paramètres depuis zéro
+  (2 couches / 128 dims), puis 124 M par ajustement de GPT-2. Le mode
+  `scratch` de Daisy (4 couches / 256 dims, ≈ 16,1 M) sert à la comparaison.
 - Le **refus de répondre** est une fonctionnalité à part entière, pas un
   effet de bord.
 

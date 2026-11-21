@@ -2,7 +2,7 @@
 
 *Ce chapitre répond à la question : comment raconter honnêtement une
 collaboration avec l'IA quand les prompts exacts n'ont pas été conservés ? À
-la fin, le lecteur dispose d'une méthode de documentation et de cinq zones à
+la fin, le lecteur dispose d'une méthode de documentation et de sept zones à
 compléter avec ses propres souvenirs.*
 
 > **Avertissement méthodologique**
@@ -127,8 +127,8 @@ documentation fait partie du développement, pas d'une phase finale.
 ### `66e4623` — 20 novembre : choisir des scripts plutôt que des notebooks
 
 *« Supprimer les notebooks obsolètes et nettoyer la documentation »* —
-−590 lignes, principalement `train.ipynb` (452 lignes) et `test.ipynb`
-(125 lignes).
+6 fichiers, +3/−590 lignes, principalement `train.ipynb` (452 lignes au HEAD,
+458 au commit `b033165`) et `test.ipynb` (125 lignes).
 
 C'est une décision de forme aux conséquences pédagogiques : le projet sera
 lisible comme une suite de fichiers Python exécutables, sans dépendre d'un
@@ -145,7 +145,8 @@ manuscrit.
 *« Passer a GPT-2 pre-entraine, ajouter le support GPU et regenerer la
 documentation »* — 17 fichiers, +328/−167. `train.py` est profondément
 remanié : `--init`, `--pretrained-model`, `--fp16`, architectures `scratch`
-configurables. Toute la documentation est régénérée.
+configurables. Onze des treize fichiers `doc/` sont modifiés ; les deux autres
+(`05-generation.md`, `06-serveur-local.md`) restent inchangés.
 
 Le code garde la justification de ce choix dans son en-tête (chapitre 1) :
 avec 745 exemples, un modèle entraîné de zéro ne peut pas apprendre la langue
@@ -174,8 +175,10 @@ nuisait au résultat.
 ## 3.3 Les traces de décisions dans le code
 
 C'est ici que l'IA et le développeur laissent les traces les plus lisibles :
-les commentaires qui expliquent un **échec**. On n'écrit ce genre de
-commentaire que lorsqu'on a essayé, observé, puis renoncé.
+les commentaires et les docstrings qui expliquent un **échec**. On n'écrit ce
+genre de note que lorsqu'on a essayé, observé, puis renoncé. Les extraits
+ci-dessous sont reproduits sans leur indentation ; le premier (`a`) est une
+docstring, les autres des commentaires `#`.
 
 ### a. La contrainte de décodage, abandonnée
 
@@ -240,13 +243,14 @@ lignes, mais elle a nécessité d'observer les deux symptômes.
 
 ### e. L'abstention mal placée
 
-`prepare_rag_dataset.py`, lignes 65-67 :
+`prepare_rag_dataset.py`, lignes 65-69 :
 
 ```python
 # Peu d'exemples de refus : uniquement pour des questions hors base.
 # Les anciennes versions utilisaient items[:5] (des questions couvertes),
 # ce qui apprenait au modèle à refuser des questions auxquelles il sait
-# répondre.
+# répondre. Les questions hors base sont aussi gérées par is_supported()
+# dans rag.py à l'inférence.
 ```
 
 **Ce que cela raconte.** Le premier jeu d'abstention prenait les cinq

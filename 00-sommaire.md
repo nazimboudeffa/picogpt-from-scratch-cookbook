@@ -1,7 +1,15 @@
 # Sommaire et notes éditoriales
 
 *Version de travail — sources vérifiées sur le dépôt `picogpt1-daisy` à l'état
-du commit `320a572` (21 novembre 2026).*
+du commit `320a572` (21 novembre 2026, 01 h 25).*
+
+> **Édition figée.** Le dépôt source a été renommé
+> [`picogpt-kit`](https://github.com/nazimboudeffa/picogpt-kit) le 21 novembre
+> à 03 h 45 (`f24cc33`) et compte désormais seize commits, avec le modèle
+> `PicoGPT1-Iris` 1.1.0. Les corrections apportées à ce manuscrit visent
+> uniquement à rendre chaque affirmation exacte pour `320a572` ; elles ne
+> changent pas le périmètre du récit. L'état courant (`71e30d9`) est
+> volontairement hors sujet.
 
 ------------------------------------------------------------------------
 
@@ -10,8 +18,10 @@ du commit `320a572` (21 novembre 2026).*
 Le brouillon initial (`README.md` de ce dépôt) n'est pas faux : il décrit
 fidèlement une **étape ancienne** du projet. Il correspond aux chiffres
 encore affichés dans le `README.md` de `picogpt1-daisy` avant le 21 novembre
-2026, c'est-à-dire à l'époque où le modèle était entraîné **de zéro**
-(`--init scratch`). Depuis, deux commits ont changé la donne :
+2026, c'est-à-dire à l'époque où le modèle était entraîné **de zéro** avec une
+configuration 2 couches / 128 dimensions / 2 têtes. L'option `--init scratch`
+n'existe pas encore à ce stade : elle sera ajoutée par `12c8df5` pour rejouer
+une comparaison. Depuis, deux commits ont changé la donne :
 
 - `12c8df5` — « Passer a GPT-2 pre-entraine, ajouter le support GPU et
   regenerer la documentation » ;
@@ -23,7 +33,7 @@ est désormais associé à sa source vérifiable.
 | Élément | Brouillon (première époque) | État actuel (`320a572`) | Où vérifier |
 | --- | --- | --- | --- |
 | Initialisation | Poids aléatoires, « depuis zéro » | GPT-2 **pré-entraîné** (`--init pretrained` par défaut) | `train.py:103-106,159-167` |
-| Paramètres | ≈ 6,86 millions | **124 439 808** | `doc/09-architecture.md`, `README.md` §13 |
+| Paramètres | ≈ 6,86 millions (2 couches / 128 dims) | **124 439 808** | brouillon : `MODEL_CARD.md` @ `1c00747` ; actuel : `doc/09-architecture.md`, `README.md` §13 |
 | Exemples | 745 (500 Alpaca + 245 ancrés) | **2 442** (2 000 + 245 + 197) | `README.md` §6, `doc/03-dataset.md` |
 | Jeux de données | `train.txt`, `rag_train.txt` | + `facts_train.txt` | `train.py:27-31` |
 | Époques | 10 | 5 pour l'entraînement de référence (3 par défaut en fine-tuning, 10 en `scratch`) | `doc/04-entrainement.md` |
@@ -31,7 +41,7 @@ est désormais associé à sa source vérifiable.
 | Loss | ≈ 4,54 (finale) | 1,58 (moyenne), ≈ 1,05 (dernière journalisée) | `doc/04-entrainement.md` |
 | Matériel | CPU | CUDA + `--fp16`, 250,8 s sur RTX 3070 | `doc/04-entrainement.md` |
 | Notebooks | `train.ipynb`, `test.ipynb` | Supprimés au commit `66e4623` ; scripts Python directs | `git ls-tree HEAD` |
-| Dépendance RAG | non mentionnée | `scikit-learn` requise | `rag.py:41`, `README.md` §3 |
+| Dépendance RAG | non mentionnée | `scikit-learn` requise | `rag.py:38-41`, `README.md` §3 |
 
 **Nuance importante.** Le mode « depuis zéro » n'a pas disparu : il reste
 disponible avec `python train.py --init scratch`. Le titre du livre garde donc
@@ -88,10 +98,12 @@ les ordres et les reprises.
 - La boîte noire des grands modèles et le choix d'un laboratoire réduit.
 - **L'origine réelle : le livre de Raschka, puis les dépôts `picogpt-python`
   (juin 2025) et `picogpt1-scratch-python` (avril 2026).**
-- La chaîne complète, du texte brut au chat navigateur : neuf étapes, neuf
+- La chaîne complète, du texte brut au chat navigateur : neuf étapes, treize
   fichiers, une question par étape.
-- Les deux époques du projet : 6,86 M paramètres puis 124 M ; ce que cela
-  change dans le récit.
+- Les deux époques du projet : 6,86 M pour la première architecture (2 couches
+  / 128 dims), puis 124 M par ajustement ; ce que cela change dans le récit.
+  Le mode `scratch` conservé dans Daisy utilise une autre configuration
+  (4 couches / 256 dims, ≈ 16,1 M) et sert à la comparaison.
 - Le parcours du lecteur et les premières commandes de vérification.
 
 ### [Chapitre 2 — Une inspiration pédagogique](02-une-inspiration-pedagogique.md) ✅ rédigé
@@ -234,6 +246,7 @@ les ordres et les reprises.
 - [x] Généalogie des cinq dépôts vérifiée (2025-2026)
 - [x] Chapitres 1, 2 et 3 (avec l'origine du projet)
 - [ ] Chapitres 4 à 12 et annexes
-- [ ] Relecture des extraits de code par rapport aux fichiers sources
+- [x] Relecture des extraits de code par rapport aux fichiers sources
+- [x] Édition figée sur `320a572` : corrections factuelles appliquées le 22 novembre 2026
 - [ ] Ajout des prompts réels dans le chapitre 3 et des souvenirs de development
 - [ ] Figer une édition destination publication
