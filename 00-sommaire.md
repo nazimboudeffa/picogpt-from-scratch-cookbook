@@ -63,7 +63,7 @@ chronologie vérifiée des dépôts est la suivante :
 | --- | --- | --- | --- |
 | source | Code `rasbt/LLMs-from-scratch` (Apache-2.0) | Référence structurante : le code étudié et compris avec ChatGPT, sans lecture du livre | [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
 | source | ChatGPT | Aide à la compréhension du code dès 2025, puis à la production à partir d'avril 2026 (chapitre 3) | — |
-| source | Articles (références en partie oubliées) et tutoriels YouTube | L'autre versant — et le plus présent — de l'apprentissage : voir les mécanismes expliqués et le code se construire | à compléter si des titres sont retrouvés |
+| source | Articles (références en partie oubliées) et tutoriels YouTube | L'autre versant — et le plus présent — de l'apprentissage : voir les mécanismes expliqués et le code se construire | [annexe G](annexe-g-sources-et-references/annexe-g-sources-et-references.md) pour les références retrouvées ; le reste à compléter |
 | juin 2025 | `picogpt-python` | Première implémentation : attention multi-têtes, `LayerNorm`, `FeedForward` et `GPTModel` écrits à la main, tokenizer `tiktoken`, phrases anglaises simples, notebooks | [nazimboudeffa/picogpt-python](https://github.com/nazimboudeffa/picogpt-python) |
 | avril 2026 | `picogpt1-scratch-python` | Avec l'IA : premier modèle entraîné sur Alpaca, `Trainer` Hugging Face, 2 couches / 128 dimensions, conversion GGUF et Ollama | [nazimboudeffa/picogpt1-scratch-python](https://github.com/nazimboudeffa/picogpt1-scratch-python) |
 | 20 nov. 2026 | `picogpt1-jasmine` | Passage aux scripts Python, publication Hugging Face, documentation complète | [nazimboudeffa/picogpt1-jasmine](https://github.com/nazimboudeffa/picogpt1-jasmine) |
@@ -228,7 +228,7 @@ les ordres et les reprises.
 - D. Chronologie Git commentée et commandes pour la reconstituer ✍️ à écrire.
 - E. Glossaire : token, EOS, label `-100`, TF-IDF, RAG, GGUF, beam search ✍️ à écrire.
 - F. Scripts complets annotés (`train.py`, `rag.py`, `model_utils.py`) ✍️ à écrire.
-- G. Sources et références ✍️ à écrire.
+- [G. Sources et références](annexe-g-sources-et-references/annexe-g-sources-et-references.md) ✅ rédigé.
 
 ------------------------------------------------------------------------
 
@@ -270,6 +270,7 @@ les ordres et les reprises.
 | Ch. 8 « Ce que le projet montre… » | Chapitre 13 |
 | — (ajout pour le livre) | Annexe A (script de l'atelier) |
 | — (ajout pour le livre) | Annexe B (petit chat avec `mon_gpt`) |
+| — (ajout pour le livre) | Annexe G (sources et références) |
 | Annexe « Carte du dépôt » | Annexe C |
 
 ------------------------------------------------------------------------
@@ -282,9 +283,10 @@ les ordres et les reprises.
 - [x] Chapitre 4 (atelier : code pédagogique vérifié, six blocs exécutables)
 - [x] Annexe A (script intégral commenté, exécuté et vérifié)
 - [x] Annexe B (petit chat interactif avec `mon_gpt`, exécuté et vérifié)
-- [ ] Chapitres 5 à 13 et annexes C à G
+- [x] Annexe G (sources et références : Vaswani, PyTorch, Karpathy, Raschka)
+- [ ] Chapitres 5 à 13 et annexes C à F
 - [x] Relecture des extraits de code par rapport aux fichiers sources
 - [x] Édition figée sur `320a572` : corrections factuelles appliquées le 22 novembre 2026
-- [ ] Ajout des prompts réels dans le chapitre 3, des souvenirs de development
-  et des références d'articles / tutoriels YouTube retrouvées
+- [ ] Ajout des prompts réels dans le chapitre 3 et des souvenirs de development
+  (les références retrouvées sont désormais dans l'annexe G)
 - [ ] Figer une édition destination publication

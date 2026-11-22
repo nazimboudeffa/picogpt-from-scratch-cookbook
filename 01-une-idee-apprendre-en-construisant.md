@@ -62,7 +62,8 @@ des licences.
 
 > **Source.** L'origine est rapportée par l'auteur du projet ; les dépôts
 > cités ci-dessous permettent de vérifier la suite, étape par étape. Les
-> références de lectures retrouvées pourront être ajoutées au chapitre 2.
+> références de lectures retrouvées sont rassemblées dans
+> l'[annexe G](annexe-g-sources-et-references/annexe-g-sources-et-references.md).
 
 ### Juin 2025 — `picogpt-python` : apprendre l'architecture
 

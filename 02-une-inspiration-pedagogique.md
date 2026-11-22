@@ -251,8 +251,11 @@ entrée, une sortie et une vérification possible.
   ordre ? Le livre lui-même n'ayant pas été lu, c'est cette question qu'il faut
   documenter.
 - **Quels articles et quels tutoriels YouTube** ont accompagné cette lecture ?
-  Ceux dont tu te souviens encore peuvent être nommés ici ; les autres
-  resteront décrits sans titre plutôt que d'être inventés.
+  Quelques repères sont déjà rassemblés dans
+  l'[annexe G](annexe-g-sources-et-references/annexe-g-sources-et-references.md)
+  (dont le tutoriel de Andrej Karpathy). Ceux dont tu te souviens encore
+  peuvent être ajoutés ici ; les autres resteront décrits sans titre plutôt
+  que d'être inventés.
 - **Confirmer l'interprétation de « PicoGPT1 »** proposée plus haut. S'il y a
   une autre raison au « 1 », elle est à écrire ici.
 - Dans `picogpt-python`, qu'est-ce qui a été **reproduit fidèlement** du dépôt
