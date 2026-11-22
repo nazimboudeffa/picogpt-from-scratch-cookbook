@@ -7,17 +7,19 @@ d'architecture plutôt que comme une recette tombée du ciel.*
 
 ------------------------------------------------------------------------
 
-## 2.1 Un cadre parmi d'autres : livres, articles et tutoriels
+## 2.1 Un cadre parmi d'autres : code, articles et tutoriels
 
-Le livre *LLMs from Scratch* de **Sebastian Raschka** et son dépôt
-[rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) sont une
-référence déclarée du projet — mais pas la seule. L'apprentissage s'est aussi
-nourri de **nombreux articles** et, **surtout, de tutoriels YouTube**, dont
-l'auteur ne se souvient plus de tous les titres. Ce chapitre présente le cadre
-que le livre a contribué à donner, sans faire croire qu'il a tout apporté.
+La référence écrite la plus clairement identifiée n'est pas le livre, mais le
+**code open source** du dépôt
+[rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch), publié
+par **Sebastian Raschka** sous licence Apache-2.0. **L'auteur n'a pas lu le
+livre** : il a parcouru le code et s'est aidé de ChatGPT pour le comprendre.
+L'apprentissage s'est aussi nourri de **nombreux articles** et, **surtout, de
+tutoriels YouTube**, dont il ne se souvient plus de tous les titres. Ce chapitre
+présente le cadre apporté par ce code, sans faire croire qu'il a tout apporté.
 
-Le livre accompagne le lecteur dans la construction progressive d'un modèle
-de langage de type GPT. Il aborde notamment :
+Le dépôt de code accompagne le lecteur dans la construction progressive d'un
+modèle de langage de type GPT. Il aborde notamment :
 
 - la préparation du texte et la tokenisation ;
 - les mécanismes d'attention ;
@@ -35,9 +37,11 @@ s'arrêter lors de la génération ?
 > Le projet ne recopie pas le code de la référence dans sa version finale. Il
 > retient la progression pédagogique, puis fait ses propres choix. Nuance
 > historique importante : dans `picogpt-python` (juin 2025), les blocs
-> d'attention **étaient** écrits à la main (`MultiHeadAttention` dans
-> `model.ipynb`). C'était la partie littéralement « from scratch » de
-> l'apprentissage. Le passage au `Trainer` en avril 2026, puis à
+> d'attention **étaient** écrits dans le notebook (`MultiHeadAttention` dans
+> `model.ipynb`), en s'inspirant de près du code amont. C'était la partie
+> littéralement « from scratch » de l'apprentissage — au sens où l'étudiant
+> reconstruisait les blocs, pas au sens où il les aurait inventés. Le passage
+> au `Trainer` en avril 2026, puis à
 > `GPT2LMHeadModel` dans Daisy, déplace ensuite l'effort de l'implémentation
 > des blocs vers le chemin des données.
 
@@ -63,16 +67,26 @@ proviennent des commits.
 | 20-21 nov. 2026 | [`picogpt1-daisy`](https://github.com/nazimboudeffa/picogpt1-daisy), aujourd'hui [`picogpt-kit`](https://github.com/nazimboudeffa/picogpt-kit) | RAG, abstention, décodage anti-boucles, puis GPT-2 pré-entraîné 124 M | 6 commits à `320a572` ; `rag.py`, `knowledge.jsonl`, `train.py` |
 | 2026 | [`picogpt-from-scratch-cookbook`](https://github.com/nazimboudeffa/picogpt-from-scratch-cookbook) | Ce livre : mise en récit et vérification des chiffres | `00-sommaire.md`, chapitres 01-04 |
 
-Le premier README cite aussi *Attention Is All You Need*, l'article GPT-2 et
-[jaymody/picoGPT](https://github.com/jaymody/picoGPT). Celui d'avril 2026
-mentionne une vidéo et le dépôt
+Le premier README cite *Attention Is All You Need*, l'article GPT-2 et
+[jaymody/picoGPT](https://github.com/jaymody/picoGPT), mais **pas** le dépôt de
+Raschka. Celui d'avril 2026 mentionne une vidéo et le dépôt
 [hassanhabib/LLMfromNothing](https://github.com/hassanhabib/LLMfromNothing).
 Ces traces confirment ce que récapitule le [chapitre 1](01-une-idee-apprendre-en-construisant.md) :
-à côté du livre de Raschka, il y a eu **beaucoup d'articles** — dont les
+à côté du code de Raschka, il y a eu **beaucoup d'articles** — dont les
 références exactes ne sont plus toutes connues — et **des tutoriels YouTube**,
 qui ont pesé au moins autant dans la manière de voir le modèle se construire.
-Le livre n'est donc pas l'unique point de départ : c'est la référence écrite la
-plus clairement identifiée d'un parcours plus large.
+Le dépôt de Raschka n'est donc pas l'unique point de départ : c'est la référence
+open source la plus clairement identifiée d'un parcours plus large.
+
+> **Licence et attribution — à régulariser dans `picogpt-python`.** Le code amont
+> est sous **Apache-2.0** (`Copyright (c) Sebastian Raschka`). Le `model.ipynb`
+> de juin 2025 reprend des briques très proches du dépôt amont (`GPTDatasetV1`,
+> `LayerNorm`, `GELU`, `MultiHeadAttention`, `GPTModel`), alors que le README de
+> `picogpt-python` ne le mentionne pas et déclare une licence MIT. Apache-2.0
+> autorise ce réemploi, mais exige de conserver l'avis de copyright, de fournir
+> un exemplaire de la licence Apache et de signaler les fichiers modifiés. C'est
+> un point à corriger dans le dépôt `picogpt-python` ;
+> ce livre se contente de le documenter.
 
 > **Décision éditoriale proposée — à confirmer par l'auteur.**
 > « PicoGPT » est un clin d'œil au petit GPT de jaymody, cité dans le premier
@@ -125,7 +139,7 @@ Les références de lignes permettent de vérifier chaque affirmation.
 
 | Ce qui est… | Élément | Où le voir |
 | --- | --- | --- |
-| **Inspiré de la lecture** | Tokenizer GPT-2, vocabulaire de 50 257 tokens | `train.py:138` (chargement), `train.py:149` (affichage), `doc/09-architecture.md` |
+| **Inspiré du code de référence** | Tokenizer GPT-2, vocabulaire de 50 257 tokens | `train.py:138` (chargement), `train.py:149` (affichage), `doc/09-architecture.md` |
 | | Format instruction → réponse avec token de fin | `train.py:55`, `train.py:141-148` |
 | | Masquage des tokens du prompt dans les labels | `train.py:59-60` |
 | | Boucle d'entraînement avec `Trainer` | `train.py:188-214` |
@@ -232,15 +246,18 @@ entrée, une sortie et une vérification possible.
 
 ## 2.6 À compléter
 
-- **Comment le livre de Raschka a-t-il été découvert** (recommandation,
-  recherche, cours) ? Quels chapitres ont été lus, et dans quel ordre ?
+- **Comment le dépôt de code de Raschka a-t-il été découvert** (recommandation,
+  recherche, vidéo) ? Quels fichiers ou notebooks as-tu parcourus, et dans quel
+  ordre ? Le livre lui-même n'ayant pas été lu, c'est cette question qu'il faut
+  documenter.
 - **Quels articles et quels tutoriels YouTube** ont accompagné cette lecture ?
   Ceux dont tu te souviens encore peuvent être nommés ici ; les autres
   resteront décrits sans titre plutôt que d'être inventés.
 - **Confirmer l'interprétation de « PicoGPT1 »** proposée plus haut. S'il y a
   une autre raison au « 1 », elle est à écrire ici.
-- Dans `picogpt-python`, qu'est-ce qui a été **reproduit fidèlement** du livre
-  et qu'est-ce qui a été simplifié dès le départ ?
+- Dans `picogpt-python`, qu'est-ce qui a été **reproduit fidèlement** du dépôt
+  de code (et avec quelle attribution Apache) et qu'est-ce qui a été simplifié
+  dès le départ ?
 - Qu'a-t-il été **décidé de ne pas reproduire** ensuite, et pourquoi (temps,
   complexité, pertinence) ?
 - Le passage de 2 couches / 128 dimensions (Jasmine) à 12 couches / 768

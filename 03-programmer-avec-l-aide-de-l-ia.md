@@ -32,19 +32,23 @@ résultats :
 | Lancer les tests et constater les erreurs | Les métriques de `evaluate.py` et les valeurs rapportées dans `doc/12-rag.md` |
 | Décider des corrections | Le seuil `DEFAULT_MIN_SCORE = 0.50`, le retrait du décodage contraint, la régénération du GGUF |
 
-L'IA a pu aider à écrire ou modifier des fichiers Python, à expliquer une
-fonction, à suggérer des commandes, à analyser un message d'erreur ou à
-imaginer des tests — comme le décrivait le brouillon. Ce qui est certain, ce
-sont les **artefacts** : scripts, documentation, commits. L'attribution
+L'IA a aidé à **comprendre** le code de `rasbt/LLMs-from-scratch` dès 2025, puis
+à écrire ou modifier des fichiers Python, à suggérer des commandes, à analyser
+un message d'erreur ou à imaginer des tests — comme le décrivait le brouillon.
+Ce qui est certain, ce sont les **artefacts** : scripts, documentation, commits.
+L'attribution
 précise de chaque ligne reste à documenter avec les vrais échanges.
 
 ------------------------------------------------------------------------
 
 ## 3.2 La chronologie commence avant Daisy
 
-### Avril 2026 : la première collaboration IA
+### Avril 2026 : l'IA passe de l'explication à la production
 
-Les six commits de Daisy ont une préhistoire. Le 19 avril 2026, le dépôt
+Les six commits de Daisy ont une préhistoire. Dès juin 2025, ChatGPT a servi à
+**comprendre le code de `rasbt/LLMs-from-scratch`** et à compléter la
+compréhension de l'architecture : l'IA était déjà présente, mais comme aide à la
+lecture, pas comme auteur de fichiers. Le 19 avril 2026, le dépôt
 [`picogpt1-scratch-python`](https://github.com/nazimboudeffa/picogpt1-scratch-python)
 est créé en trois commits : `first commit`, `train and test`, puis ajout de
 `llama.cpp` en sous-module. Le contraste avec `picogpt-python` (juin 2025) est
@@ -52,21 +56,27 @@ net :
 
 | | Juin 2025 | Avril 2026 |
 | --- | --- | --- |
-| Code du modèle | Écrit à la main (`MultiHeadAttention`, `GPTModel`) | Délégué à `GPT2LMHeadModel` via `Trainer` |
+| Code du modèle | Reconstruit dans le notebook avec ChatGPT (`MultiHeadAttention`, `GPTModel`) | Délégué à `GPT2LMHeadModel` via `Trainer` |
 | Données | `simple_english_phrases.txt` | `tatsu-lab/alpaca` |
 | Architecture | 4 couches / 256 dims / contexte 128 | 2 couches / 128 dims |
 | Interface | Notebooks | Notebooks + GGUF + Ollama |
 | Taille du checkpoint | — | `model.safetensors` de 27,5 Mo |
 
-C'est ce saut — de l'architecture écrite à la main vers un pipeline
-`Trainer` + Alpaca + GGUF — qui marque l'entrée de l'IA comme partenaire de
-développement. Les prompts de cette période ne sont pas conservés dans Git ;
+C'est ce saut — de l'architecture reconstruite dans le notebook vers un pipeline
+`Trainer` + Alpaca + GGUF — qui marque le passage de l'IA du rôle d'aide à la
+compréhension à celui de **partenaire de production**. Les prompts de cette
+période ne sont pas conservés dans Git ;
 seuls les artefacts le sont. C'est pourquoi cette étape est racontée ici
 comme un **changement de méthode**, pas comme une conversation reconstituée.
 
-> **À compléter — échange 0 (le plus ancien).** Quelle question as-tu posée
-> pour passer de `model.ipynb` à `train.ipynb` + `Trainer` ? Est-ce l'IA qui a
-> proposé Alpaca, ou étais-tu parti chercher ce jeu toi-même ?
+> **À compléter — échange −1 (2025, non conservé).** Quelles questions as-tu
+> posées à ChatGPT pour comprendre `GPTDatasetV1`, `MultiHeadAttention` ou
+> `GPTModel` du dépôt de Raschka ? Si les prompts sont perdus, une description
+> suffit — c'est déjà le cas dans le chapitre 1.
+>
+> **À compléter — échange 0 (le plus ancien conservé).** Quelle question as-tu
+> posée pour passer de `model.ipynb` à `train.ipynb` + `Trainer` ? Est-ce l'IA
+> qui a proposé Alpaca, ou étais-tu parti chercher ce jeu toi-même ?
 
 ### `b5f05c6` — 20 novembre : nommer et stabiliser
 

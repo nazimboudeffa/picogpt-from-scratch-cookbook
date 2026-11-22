@@ -53,14 +53,16 @@ le chapitre 8 (à écrire).
 ### La généalogie : des ressources d'apprentissage aux premiers dépôts
 
 Le brouillon ne disait presque rien de l'origine. Elle est pourtant essentielle
-pour comprendre le nom « PicoGPT1 » et le rôle de l'IA. Cette origine n'est pas
-un livre unique : elle mêle le livre de Raschka, **beaucoup d'articles** — dont
-l'auteur ne se souvient plus de tous les titres — et, **surtout, des tutoriels
-YouTube**. La chronologie vérifiée des dépôts est la suivante :
+pour comprendre le nom « PicoGPT1 » et le rôle de l'IA. **L'auteur n'a pas lu le
+livre de Raschka** : il a étudié le **code open source** du dépôt associé, avec
+l'aide de ChatGPT. À cela s'ajoutent **beaucoup d'articles** — dont il ne se
+souvient plus de tous les titres — et, **surtout, des tutoriels YouTube**. La
+chronologie vérifiée des dépôts est la suivante :
 
 | Date | Dépôt / ressource | Ce qui est appris ou construit | Lien |
 | --- | --- | --- | --- |
-| source | *LLMs from Scratch*, S. Raschka | Une référence structurante : construire un GPT étape par étape | [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
+| source | Code `rasbt/LLMs-from-scratch` (Apache-2.0) | Référence structurante : le code étudié et compris avec ChatGPT, sans lecture du livre | [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
+| source | ChatGPT | Aide à la compréhension du code dès 2025, puis à la production à partir d'avril 2026 (chapitre 3) | — |
 | source | Articles (références en partie oubliées) et tutoriels YouTube | L'autre versant — et le plus présent — de l'apprentissage : voir les mécanismes expliqués et le code se construire | à compléter si des titres sont retrouvés |
 | juin 2025 | `picogpt-python` | Première implémentation : attention multi-têtes, `LayerNorm`, `FeedForward` et `GPTModel` écrits à la main, tokenizer `tiktoken`, phrases anglaises simples, notebooks | [nazimboudeffa/picogpt-python](https://github.com/nazimboudeffa/picogpt-python) |
 | avril 2026 | `picogpt1-scratch-python` | Avec l'IA : premier modèle entraîné sur Alpaca, `Trainer` Hugging Face, 2 couches / 128 dimensions, conversion GGUF et Ollama | [nazimboudeffa/picogpt1-scratch-python](https://github.com/nazimboudeffa/picogpt1-scratch-python) |
@@ -99,7 +101,8 @@ les ordres et les reprises.
 ### [Chapitre 1 — Une idée : apprendre en construisant](01-une-idee-apprendre-en-construisant.md) ✅ rédigé
 
 - La boîte noire des grands modèles et le choix d'un laboratoire réduit.
-- **L'origine réelle : le livre de Raschka, de nombreux articles et surtout des
+- **L'origine réelle : le code open source de `rasbt/LLMs-from-scratch`, étudié
+  avec ChatGPT (le livre n'a pas été lu), de nombreux articles et surtout des
   tutoriels YouTube, puis les dépôts `picogpt-python` (juin 2025) et
   `picogpt1-scratch-python` (avril 2026).**
 - La chaîne complète, du texte brut au chat navigateur : neuf étapes, treize
@@ -112,10 +115,13 @@ les ordres et les reprises.
 
 ### [Chapitre 2 — Une inspiration pédagogique](02-une-inspiration-pedagogique.md) ✅ rédigé
 
-- Ce qu'apportent *LLMs from Scratch* de Sebastian Raschka, les articles lus et
-  les tutoriels YouTube, et ce que le projet ne reprend pas.
-- La généalogie complète en cinq dépôts, de l'attention écrite à la main en
-  2025 au `Trainer` de 2026 ; ce que signifie « PicoGPT1 ».
+- Ce qu'apporte le **code** de `rasbt/LLMs-from-scratch` (pas le livre), avec
+  l'aide de ChatGPT, ainsi que les articles lus et les tutoriels YouTube — et
+  ce que le projet ne reprend pas.
+- La note sur la licence Apache-2.0 et l'attribution à régulariser dans
+  `picogpt-python`.
+- La généalogie complète en cinq dépôts, de l'attention reconstruite en 2025 au
+  `Trainer` de 2026 ; ce que signifie « PicoGPT1 ».
 - La filiation `PicoGPT1-Jasmine` → `PicoGPT1-Daisy` documentée dans le
   commit `1c00747`.
 - Matrice « inspiré / adapté / propre au projet » reliée aux lignes de code.
@@ -124,6 +130,8 @@ les ordres et les reprises.
 ### [Chapitre 3 — Programmer avec l'aide de l'IA](03-programmer-avec-l-aide-de-l-ia.md) ✅ rédigé
 
 - Méthode : définir un objectif, examiner une proposition, tester, corriger.
+- ChatGPT comme aide à la compréhension du code dès 2025, puis comme partenaire
+  de production à partir d'avril 2026.
 - Les six commits racontés comme une suite de décisions.
 - Les « traces de décisions » laissées dans les commentaires du code
   (contrainte abandonnée, beam search, erreurs TLS, etc.).

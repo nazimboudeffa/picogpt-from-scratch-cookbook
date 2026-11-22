@@ -27,35 +27,38 @@ prompt ? le réglage de la génération ? la base de connaissances ?
 > et réparée.
 
 C'est l'esprit de **PicoGPT1-Daisy**. Mais cette idée ne sort pas de nulle part :
-elle vient d'un ensemble de ressources — un livre, des articles et, surtout,
-des tutoriels YouTube — puis de deux dépôts qui racontent comment elle est
-devenue un modèle. La section suivante les remet dans l'ordre ; le
+elle vient d'un ensemble de ressources — le code open source de
+`rasbt/LLMs-from-scratch` compris avec ChatGPT, des articles et, surtout, des
+tutoriels YouTube — puis de deux dépôts qui racontent comment elle est devenue
+un modèle. La section suivante les remet dans l'ordre ; le
 [chapitre 2](02-une-inspiration-pedagogique.md) entre dans les choix techniques.
 
 ------------------------------------------------------------------------
 
 ## 1.2 Le point de départ : des ressources variées, puis deux dépôts
 
-### Le livre : *LLMs from Scratch*
+### Le code de *LLMs from Scratch*, pas le livre
 
-Parmi les ressources qui ont nourri le projet, le livre de **Sebastian Raschka**,
-*LLMs from Scratch*, et son dépôt
-[rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) occupent
-une place structurante. C'est de là que vient la méthode : ne pas consommer un
-modèle comme une boîte noire, mais construire les pièces les unes après les
-autres pour comprendre comment du texte devient une réponse. Ce n'était toutefois
-pas l'unique point de départ.
+Parmi les ressources qui ont nourri le projet, le dépôt de code
+[rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) de
+**Sebastian Raschka** occupe une place structurante. **Précision importante :
+l'auteur n'a pas lu le livre.** Il a parcouru le code open source (sous licence
+Apache-2.0) et s'est aidé de ChatGPT pour le comprendre, avant de reconstruire
+les pièces dans `picogpt-python` (juin 2025). C'est de là que vient la méthode :
+ne pas consommer un modèle comme une boîte noire, mais assembler les étapes les
+unes après les autres pour voir comment du texte devient une réponse.
 
 ### Les articles et, surtout, les tutoriels YouTube
 
-À ce livre se sont ajoutées **beaucoup de lectures d'articles** et, plus encore,
+À ce code se sont ajoutées **beaucoup de lectures d'articles** et, plus encore,
 **des tutoriels YouTube**. C'est même le canal le plus présent dans le parcours :
 voir une architecture se monter et un modèle s'entraîner à l'écran rend concret
 ce que la lecture seule laisse abstrait. L'auteur ne se souvient plus de tous
 les titres ; le récit ne les inventera donc pas. Quelques traces subsistent
 toutefois dans les README : le premier cite *Attention Is All You Need* et
 l'article GPT-2, celui d'avril 2026 mentionne une vidéo. Le
-[chapitre 2](02-une-inspiration-pedagogique.md) reprend ces éléments.
+[chapitre 2](02-une-inspiration-pedagogique.md) reprend ces éléments et la question
+des licences.
 
 > **Source.** L'origine est rapportée par l'auteur du projet ; les dépôts
 > cités ci-dessous permettent de vérifier la suite, étape par étape. Les
@@ -86,7 +89,8 @@ puis l'ajout de `llama.cpp` en sous-module. La méthode change du tout au tout :
 - l'entraînement est confié au `Trainer` de Hugging Face dans `train.ipynb` ;
 - le modèle est converti en GGUF et essayé avec Ollama.
 
-C'est ici que l'IA devient un partenaire de développement — le sujet du
+C'est ici que l'IA devient un partenaire de **développement** — elle servait
+déjà, depuis 2025, d'aide à la compréhension du code ; le sujet du
 [chapitre 3](03-programmer-avec-l-aide-de-l-ia.md). Et c'est ici que le « 1 »
 apparaît. La description du dépôt est explicite :
 
@@ -267,7 +271,8 @@ python train.py --help
 
 - Le projet est un **laboratoire** : l'objectif est de comprendre la chaîne,
   pas de fabriquer un assistant généraliste.
-- L'idée vient d'un ensemble de ressources — le livre *LLMs from Scratch*, des
+- L'idée vient d'un ensemble de ressources — le **code** open source de
+  `rasbt/LLMs-from-scratch` étudié avec ChatGPT (le livre n'a pas été lu), des
   articles et surtout des tutoriels YouTube — puis passe par `picogpt-python`
   (juin 2025, architecture écrite à la main) et `picogpt1-scratch-python`
   (avril 2026, premier modèle avec l'IA) avant Jasmine et Daisy.
@@ -282,5 +287,5 @@ python train.py --help
   effet de bord.
 
 **Suite :** [Chapitre 2 — Une inspiration pédagogique](02-une-inspiration-pedagogique.md),
-où l'on sépare ce qui vient des livres, articles et tutoriels de ce qui est
-propre à Daisy.
+où l'on sépare ce qui vient du code de référence, des articles et des tutoriels
+de ce qui est propre à Daisy.
