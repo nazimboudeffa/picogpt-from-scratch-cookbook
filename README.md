@@ -1,4 +1,4 @@
-# Livre — De LLMs from Scratch à PicoGPT1
+# Livre — PicoGPT from Scratch
 
 Version de travail — **édition figée sur PicoGPT1-Daisy**. Le contenu est
 rédigé à partir du dépôt réel
