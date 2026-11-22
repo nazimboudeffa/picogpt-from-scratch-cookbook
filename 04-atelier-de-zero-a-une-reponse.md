@@ -50,7 +50,7 @@ ici : **reproduire des motifs vus, pas raisonner**.
 ## 4.2 Bloc 1 — le corpus et le tokenizer
 
 Les six blocs de code qui suivent se recopient **dans cet ordre**, dans un
-seul fichier nommé `mini_gpt.py`. Aucun autre fichier n'est nécessaire.
+seul fichier nommé `mon_gpt.py`. Aucun autre fichier n'est nécessaire.
 
 ```python
 import torch
@@ -269,11 +269,13 @@ out = model.generate(torch.tensor([encode(prompt)]), max_new_tokens=60)
 print(decode(out[0].tolist()))
 ```
 
-Le script complet s'exécute avec les deux commandes suivantes :
+Une version intégralement commentée, prête à être recopiée d'un seul bloc,
+est reproduite en [annexe A](annexe-a-mon-gpt-complet/annexe-a-mon-gpt-complet.md). Le script complet
+s'exécute avec les deux commandes suivantes :
 
 ```bash
-python -m py_compile mini_gpt.py   # vérification syntaxique, chapitre 5
-python mini_gpt.py
+python -m py_compile mon_gpt.py   # vérification syntaxique, chapitre 5
+python mon_gpt.py
 ```
 
 Sortie observée lors de la vérification de ce chapitre (Python 3.13.2,

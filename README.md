@@ -23,6 +23,10 @@ Chapitres déjà rédigés :
 3. [Programmer avec l'aide de l'IA](03-programmer-avec-l-aide-de-l-ia.md)
 4. [Atelier : de zéro à une première réponse](04-atelier-de-zero-a-une-reponse.md)
 
+Annexe rédigée :
+
+- [A. `mon_gpt.py` complet et commenté (chapitre 4)](annexe-a-mon-gpt-complet/annexe-a-mon-gpt-complet.md)
+
 Les autres chapitres sont annoncés dans le sommaire et restent à écrire.
 
 > Les fichiers cités dans le livre (`train.py`, `rag.py`, `knowledge.jsonl`,

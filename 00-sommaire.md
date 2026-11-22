@@ -129,7 +129,7 @@ les ordres et les reprises.
 
 - Un GPT miniature écrit à la main : tokenizer de caractères, lots décalés,
   attention causale, deux blocs, `AdamW`, génération.
-- Six blocs de code à recopier dans un seul `mini_gpt.py` ; sortie vérifiée
+- Six blocs de code à recopier dans un seul `mon_gpt.py` ; sortie vérifiée
   (loss 3,287 → 0,064, Python 3.13.2 / `torch` 2.7.1).
 - Code **pédagogique écrit pour le livre**, explicitement distinct du code de
   `picogpt1-daisy` (convention n° 1 ci-dessous).
@@ -206,13 +206,14 @@ les ordres et les reprises.
 - Pistes : jeu de validation, quantification `Q4_K_M`, extension de la base.
 - Sources : `doc/11-limites.md`, `README.md` §15, `MODEL_CARD.md`.
 
-### Annexes ✍️ à écrire
+### Annexes
 
-- A. Carte complète du dépôt (fichiers versionnés / générés).
-- B. Chronologie Git commentée et commandes pour la reconstituer.
-- C. Glossaire : token, EOS, label `-100`, TF-IDF, RAG, GGUF, beam search.
-- D. Scripts complets annotés (`train.py`, `rag.py`, `model_utils.py`).
-- E. Sources et références.
+- [A. `mon_gpt.py` complet et commenté (chapitre 4)](annexe-a-mon-gpt-complet/annexe-a-mon-gpt-complet.md) ✅ rédigé
+- B. Carte complète du dépôt (fichiers versionnés / générés) ✍️ à écrire.
+- C. Chronologie Git commentée et commandes pour la reconstituer ✍️ à écrire.
+- D. Glossaire : token, EOS, label `-100`, TF-IDF, RAG, GGUF, beam search ✍️ à écrire.
+- E. Scripts complets annotés (`train.py`, `rag.py`, `model_utils.py`) ✍️ à écrire.
+- F. Sources et références ✍️ à écrire.
 
 ------------------------------------------------------------------------
 
@@ -252,7 +253,8 @@ les ordres et les reprises.
 | Ch. 6 « Relier à une base… » | Chapitres 10 et 11 |
 | Ch. 7 « Passer du modèle à l'outil » | Chapitre 12 |
 | Ch. 8 « Ce que le projet montre… » | Chapitre 13 |
-| Annexe « Carte du dépôt » | Annexe A |
+| — (ajout pour le livre) | Annexe A (script de l'atelier) |
+| Annexe « Carte du dépôt » | Annexe B |
 
 ------------------------------------------------------------------------
 
@@ -262,7 +264,8 @@ les ordres et les reprises.
 - [x] Généalogie des cinq dépôts vérifiée (2025-2026)
 - [x] Chapitres 1, 2 et 3 (avec l'origine du projet)
 - [x] Chapitre 4 (atelier : code pédagogique vérifié, six blocs exécutables)
-- [ ] Chapitres 5 à 13 et annexes
+- [x] Annexe A (script intégral commenté, exécuté et vérifié)
+- [ ] Chapitres 5 à 13 et annexes B à F
 - [x] Relecture des extraits de code par rapport aux fichiers sources
 - [x] Édition figée sur `320a572` : corrections factuelles appliquées le 22 novembre 2026
 - [ ] Ajout des prompts réels dans le chapitre 3 et des souvenirs de development
