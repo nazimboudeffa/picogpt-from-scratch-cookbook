@@ -209,11 +209,12 @@ les ordres et les reprises.
 ### Annexes
 
 - [A. `mon_gpt.py` complet et commenté (chapitre 4)](annexe-a-mon-gpt-complet/annexe-a-mon-gpt-complet.md) ✅ rédigé
-- B. Carte complète du dépôt (fichiers versionnés / générés) ✍️ à écrire.
-- C. Chronologie Git commentée et commandes pour la reconstituer ✍️ à écrire.
-- D. Glossaire : token, EOS, label `-100`, TF-IDF, RAG, GGUF, beam search ✍️ à écrire.
-- E. Scripts complets annotés (`train.py`, `rag.py`, `model_utils.py`) ✍️ à écrire.
-- F. Sources et références ✍️ à écrire.
+- [B. Petit chat avec `mon_gpt`](annexe-b-petit-chat/annexe-b-petit-chat.md) ✅ rédigé
+- C. Carte complète du dépôt (fichiers versionnés / générés) ✍️ à écrire.
+- D. Chronologie Git commentée et commandes pour la reconstituer ✍️ à écrire.
+- E. Glossaire : token, EOS, label `-100`, TF-IDF, RAG, GGUF, beam search ✍️ à écrire.
+- F. Scripts complets annotés (`train.py`, `rag.py`, `model_utils.py`) ✍️ à écrire.
+- G. Sources et références ✍️ à écrire.
 
 ------------------------------------------------------------------------
 
@@ -254,7 +255,8 @@ les ordres et les reprises.
 | Ch. 7 « Passer du modèle à l'outil » | Chapitre 12 |
 | Ch. 8 « Ce que le projet montre… » | Chapitre 13 |
 | — (ajout pour le livre) | Annexe A (script de l'atelier) |
-| Annexe « Carte du dépôt » | Annexe B |
+| — (ajout pour le livre) | Annexe B (petit chat avec `mon_gpt`) |
+| Annexe « Carte du dépôt » | Annexe C |
 
 ------------------------------------------------------------------------
 
@@ -265,7 +267,8 @@ les ordres et les reprises.
 - [x] Chapitres 1, 2 et 3 (avec l'origine du projet)
 - [x] Chapitre 4 (atelier : code pédagogique vérifié, six blocs exécutables)
 - [x] Annexe A (script intégral commenté, exécuté et vérifié)
-- [ ] Chapitres 5 à 13 et annexes B à F
+- [x] Annexe B (petit chat interactif avec `mon_gpt`, exécuté et vérifié)
+- [ ] Chapitres 5 à 13 et annexes C à G
 - [x] Relecture des extraits de code par rapport aux fichiers sources
 - [x] Édition figée sur `320a572` : corrections factuelles appliquées le 22 novembre 2026
 - [ ] Ajout des prompts réels dans le chapitre 3 et des souvenirs de development

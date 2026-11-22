@@ -270,7 +270,10 @@ print(decode(out[0].tolist()))
 ```
 
 Une version intégralement commentée, prête à être recopiée d'un seul bloc,
-est reproduite en [annexe A](annexe-a-mon-gpt-complet/annexe-a-mon-gpt-complet.md). Le script complet
+est reproduite en [annexe A](annexe-a-mon-gpt-complet/annexe-a-mon-gpt-complet.md).
+Une variante interactive, qui garde le même modèle mais remplace le prompt
+figé par une boucle de conversation, est proposée en
+[annexe B](annexe-b-petit-chat/annexe-b-petit-chat.md). Le script complet
 s'exécute avec les deux commandes suivantes :
 
 ```bash

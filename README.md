@@ -26,6 +26,7 @@ Chapitres déjà rédigés :
 Annexe rédigée :
 
 - [A. `mon_gpt.py` complet et commenté (chapitre 4)](annexe-a-mon-gpt-complet/annexe-a-mon-gpt-complet.md)
+- [B. Petit chat avec `mon_gpt`](annexe-b-petit-chat/annexe-b-petit-chat.md)
 
 Les autres chapitres sont annoncés dans le sommaire et restent à écrire.
 

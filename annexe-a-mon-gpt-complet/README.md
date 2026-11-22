@@ -46,4 +46,6 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 On quitte l'environnement avec `deactivate`. Le dossier `.venv` ne doit pas
 être versionné ; le chapitre 5 reviendra sur ce point.
 
+Voir aussi : [annexe B — petit chat avec `mon_gpt`](../annexe-b-petit-chat/README.md).
+
 Retour au [sommaire](../00-sommaire.md).
