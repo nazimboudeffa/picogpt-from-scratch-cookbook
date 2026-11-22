@@ -18,15 +18,16 @@ l'impression d'un assistant, sans introduire le moindre concept nouveau. C'est
 le prolongement naturel de l'atelier ; le chapitre 5 peut ensuite rester
 consacré à l'installation.
 
-Le script fourni ici est [`mon_gpt_chat.py`](mon_gpt_chat.py). Il est
-**autonome** : on le lance directement, sans importer l'annexe A. Cela évite
+Le bloc fourni ici est à recopier dans un fichier nommé `mon_gpt_chat.py`.
+Il est **autonome** : on le lance directement, sans importer l'annexe A. Cela évite
 de modifier `mon_gpt` et garde les deux annexes indépendantes. On pourra
 revenir sur ce chat au chapitre 9, quand le projet réel montre son `test.py`,
 pour mesurer le chemin parcouru entre ce jouet et la génération ancrée.
 
 ## B.2 Le script intégral
 
-Le bloc ci-dessous est le contenu exact de `mon_gpt_chat.py`.
+Le bloc ci-dessous est le script complet, à recopier tel quel dans
+`mon_gpt_chat.py`.
 
 ```python
 """mon_gpt_chat.py — petit chat interactif avec le modèle du chapitre 4.

@@ -5,12 +5,14 @@ de l'[annexe A](../annexe-a-mon-gpt-complet/README.md) : même corpus, même
 tokenizer, même architecture, même entraînement. Seule la fin change : le
 prompt figé est remplacé par une boucle de conversation.
 
-- Le script exécutable : [`mon_gpt_chat.py`](mon_gpt_chat.py)
-- Le commentaire détaillé : [annexe-b-petit-chat.md](annexe-b-petit-chat.md)
+- Le code complet et ses commentaires :
+  [annexe-b-petit-chat.md](annexe-b-petit-chat.md)
 - Le chapitre correspondant :
   [chapitre 4 — Atelier](../04-atelier-de-zero-a-une-reponse.md)
 
 ## Lancer le chat
+
+Recopier le bloc Python de l'annexe dans un fichier `mon_gpt_chat.py`, puis :
 
 ```bash
 python mon_gpt_chat.py
