@@ -1,13 +1,15 @@
 # Livre — PicoGPT from Scratch
 
-Version de travail — **édition figée sur PicoGPT1-Daisy**. Le contenu est
-rédigé à partir du dépôt réel
-[`picogpt1-daisy`](https://github.com/nazimboudeffa/picogpt1-daisy), dont
-l'état de référence est le commit `320a572` (21 novembre 2026, 01 h 25).
-Ce dépôt a été renommé
-[`picogpt-kit`](https://github.com/nazimboudeffa/picogpt-kit) le même jour à
-03 h 45 (`f24cc33`) ; l'ancienne URL redirige vers lui. Le manuscrit reste
-aligné sur `320a572`, pas sur l'état courant (`71e30d9`, PicoGPT1-Iris 1.1.0).
+Version de travail — sources vérifiées sur le dépôt `picogpt-kit` à l'état du
+commit `320a572` (21 novembre 2026, 01 h 25).
+
+**Édition `picogpt-kit` — non figée.** Le dépôt source a été renommé
+[`picogpt-kit`](https://github.com/nazimboudeffa/picogpt-kit) le 21 novembre à
+03 h 45 (`f24cc33`) et compte désormais seize commits, avec le modèle
+`PicoGPT1-Iris` 1.1.0. Les corrections apportées à ce manuscrit visent
+uniquement à rendre chaque affirmation exacte pour `320a572` ; elles ne
+changent pas le périmètre du récit. L'état courant (`71e30d9`) est
+volontairement hors sujet.
 
 **Point d'entrée : [00-sommaire.md](00-sommaire.md)** — plan corrigé,
 généalogie des dépôts, chronologie des commits et conventions de rédaction.
@@ -57,8 +59,7 @@ Les repères les plus directs sont :
   **Apache-2.0** (Copyright © Sebastian Raschka). Le **livre** associé (Manning,
   2024) n'est pas couvert par cette licence et **n'a pas été lu** : c'est le code
   open source qui a été étudié, avec l'aide de ChatGPT.
-- Les scripts de `picogpt1-daisy` / `picogpt-kit` appartiennent à un dépôt sans
-  licence déclarée. Le chapitre 4 et les annexes présentent du code pédagogique
+- Les scripts de `picogpt-kit` appartiennent à un dépôt sans licence déclarée. Le chapitre 4 et les annexes présentent du code pédagogique
   écrit pour le livre, et non du code du projet.
 - `model.ipynb` de `picogpt-python` (juin 2025) reprend des structures très
   proches du code amont ; l'attribution Apache et la copie de la licence restent
@@ -98,6 +99,6 @@ Linux/macOS, est expliquée dans le
 [README de l'annexe A](annexe-a-mon-gpt-complet/README.md).
 
 > Les fichiers cités dans le livre (`train.py`, `rag.py`, `knowledge.jsonl`,
-> `doc/…`) appartiennent au dépôt `picogpt1-daisy`, aujourd'hui `picogpt-kit`.
+> `doc/…`) appartiennent au dépôt `picogpt-kit`.
 > Le manuscrit est versionné dans `picogpt-from-scratch-cookbook` ; l'ancienne
 > URL `picogpt-from-scratch` redirige vers ce dépôt.

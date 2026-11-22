@@ -1,9 +1,9 @@
 # Sommaire et notes éditoriales
 
-*Version de travail — sources vérifiées sur le dépôt `picogpt1-daisy` à l'état
+*Version de travail — sources vérifiées sur le dépôt `picogpt-kit` à l'état
 du commit `320a572` (21 novembre 2026, 01 h 25).*
 
-> **Édition figée.** Le dépôt source a été renommé
+> **Édition `picogpt-kit` — non figée.** Le dépôt source a été renommé
 > [`picogpt-kit`](https://github.com/nazimboudeffa/picogpt-kit) le 21 novembre
 > à 03 h 45 (`f24cc33`) et compte désormais seize commits, avec le modèle
 > `PicoGPT1-Iris` 1.1.0. Les corrections apportées à ce manuscrit visent
@@ -17,7 +17,7 @@ du commit `320a572` (21 novembre 2026, 01 h 25).*
 
 Le brouillon initial (`README.md` de ce dépôt) n'est pas faux : il décrit
 fidèlement une **étape ancienne** du projet. Il correspond aux chiffres
-encore affichés dans le `README.md` de `picogpt1-daisy` avant le 21 novembre
+encore affichés dans le `README.md` de `picogpt-kit` avant le 21 novembre
 2026, c'est-à-dire à l'époque où le modèle était entraîné **de zéro** avec une
 configuration 2 couches / 128 dimensions / 2 têtes. L'option `--init scratch`
 n'existe pas encore à ce stade : elle sera ajoutée par `12c8df5` pour rejouer
@@ -67,7 +67,7 @@ chronologie vérifiée des dépôts est la suivante :
 | juin 2025 | `picogpt-python` | Première implémentation : attention multi-têtes, `LayerNorm`, `FeedForward` et `GPTModel` écrits à la main, tokenizer `tiktoken`, phrases anglaises simples, notebooks | [nazimboudeffa/picogpt-python](https://github.com/nazimboudeffa/picogpt-python) |
 | avril 2026 | `picogpt1-scratch-python` | Avec l'IA : premier modèle entraîné sur Alpaca, `Trainer` Hugging Face, 2 couches / 128 dimensions, conversion GGUF et Ollama | [nazimboudeffa/picogpt1-scratch-python](https://github.com/nazimboudeffa/picogpt1-scratch-python) |
 | 20 nov. 2026 | `picogpt1-jasmine` | Passage aux scripts Python, publication Hugging Face, documentation complète | [nazimboudeffa/picogpt1-jasmine](https://github.com/nazimboudeffa/picogpt1-jasmine) |
-| 20-21 nov. 2026 | `picogpt1-daisy` | RAG, abstention, décodage anti-boucles, puis GPT-2 pré-entraîné 124 M | [nazimboudeffa/picogpt1-daisy](https://github.com/nazimboudeffa/picogpt1-daisy) |
+| 20-21 nov. 2026 | `picogpt-kit` | RAG, abstention, décodage anti-boucles, puis GPT-2 pré-entraîné 124 M | [nazimboudeffa/picogpt-kit](https://github.com/nazimboudeffa/picogpt-kit) |
 
 **Décision éditoriale proposée.** « PicoGPT1 » n'est pas un numéro de version
 au sens strict : c'est le nom du **premier modèle entraîné**, par opposition
@@ -146,7 +146,7 @@ les ordres et les reprises.
 - Six blocs de code à recopier dans un seul `mon_gpt.py` ; sortie vérifiée
   (loss 3,287 → 0,064, Python 3.13.2 / `torch` 2.7.1).
 - Code **pédagogique écrit pour le livre**, explicitement distinct du code de
-  `picogpt1-daisy` (convention n° 1 ci-dessous).
+  `picogpt-kit` (convention n° 1 ci-dessous).
 - Tableau de correspondance avec le projet réel : 106 264 paramètres contre
   124 439 808, 24 caractères contre 50 257 tokens BPE.
 - Pourquoi un modèle sur cinq phrases mémorise et ne répond pas : ouverture
@@ -235,7 +235,7 @@ les ordres et les reprises.
 ## 4. Conventions de rédaction
 
 1. **Le code est réel.** Les extraits sont repris des fichiers de
-   `picogpt1-daisy` ; les numéros de lignes indiqués permettent de les
+   `picogpt-kit` ; les numéros de lignes indiqués permettent de les
    retrouver. Aucun code « d'illustration » n'est présenté comme du code du
    projet. Seule exception explicitement signalée : le chapitre 4, où le
    code pédagogique écrit pour le livre est présenté comme tel, sans jamais
@@ -286,7 +286,7 @@ les ordres et les reprises.
 - [x] Annexe G (sources et références : Vaswani, PyTorch, Karpathy, Raschka)
 - [ ] Chapitres 5 à 13 et annexes C à F
 - [x] Relecture des extraits de code par rapport aux fichiers sources
-- [x] Édition figée sur `320a572` : corrections factuelles appliquées le 22 novembre 2026
+- [x] Alignement sur `320a572` : corrections factuelles appliquées le 22 novembre 2026
 - [ ] Ajout des prompts réels dans le chapitre 3 et des souvenirs de development
   (les références retrouvées sont désormais dans l'annexe G)
-- [ ] Figer une édition destination publication
+- [ ] Préparer l'édition `picogpt-kit` pour la publication

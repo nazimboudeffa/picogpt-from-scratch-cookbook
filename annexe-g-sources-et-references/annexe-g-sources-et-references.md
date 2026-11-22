@@ -2,7 +2,7 @@
 
 *Cette annexe rassemble les repères bibliographiques cités ou retrouvés au fil
 du manuscrit. Elle ne remplace pas les sources du projet — commits, fichiers et
-README de `picogpt1-daisy` — qui restent la référence pour les faits datés.*
+README de `picogpt-kit` — qui restent la référence pour les faits datés.*
 
 > **Précision conservée.** Le livre de Sebastian Raschka **n'a pas été lu** :
 > c'est le **dépôt de code open source** associé qui a été étudié, avec l'aide de

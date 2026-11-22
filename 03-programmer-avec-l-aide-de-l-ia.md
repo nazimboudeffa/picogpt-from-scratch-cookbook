@@ -6,7 +6,7 @@ la fin, le lecteur dispose d'une méthode de documentation et de huit zones à
 compléter avec ses propres souvenirs.*
 
 > **Avertissement méthodologique**
-> Les six commits de `picogpt1-daisy` prouvent **ce qui a changé** et **quand**.
+> Les six commits de `picogpt-kit` prouvent **ce qui a changé** et **quand**.
 > Ils ne contiennent ni les prompts ni les réponses de l'assistant. Ce chapitre
 > ne reconstitue donc que ce que les fichiers permettent d'affirmer. Chaque
 > zone `À compléter` doit être remplie à partir de notes ou de souvenirs
@@ -299,7 +299,7 @@ c'est un troisième outil, avec un troisième rôle.
 Pour le manuscrit, il a servi à vérifier les affirmations contre les dépôts
 réels, à corriger le récit (origine du projet, licences, chronologie), puis à
 committer et pousser les changements. Pour `picogpt-kit`, il assiste le
-développement en cours, postérieur à l'état figé `320a572` décrit ici : le livre
+développement en cours, postérieur à l'état de référence `320a572` décrit ici : le livre
 s'arrête à une photographie, alors que l'outil continue de travailler sur la
 suite.
 

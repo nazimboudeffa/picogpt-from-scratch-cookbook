@@ -64,7 +64,7 @@ proviennent des commits.
 | Juin 2025 | [`picogpt-python`](https://github.com/nazimboudeffa/picogpt-python) | Architecture écrite à la main : 4 couches, 256 dimensions, 128 tokens de contexte, 4 têtes ; tokenizer `tiktoken`, phrases anglaises simples | `model.ipynb` : `LayerNorm`, `FeedForward`, `MultiHeadAttention`, `GPTModel` |
 | 19 avr. 2026 | [`picogpt1-scratch-python`](https://github.com/nazimboudeffa/picogpt1-scratch-python) | Premier modèle entraîné : Alpaca, 2 couches / 128 dimensions, `Trainer`, GGUF et Ollama | 3 commits ; `train.ipynb` (452 lignes au HEAD, 458 au commit `b033165`), `PicoGPT1-Scratch/` |
 | 20-21 nov. 2026 | [`picogpt1-jasmine`](https://github.com/nazimboudeffa/picogpt1-jasmine) | Passage aux scripts Python, publication Hugging Face, documentation en 11 fiches + un index | 6 commits (le 6ᵉ le 21 nov. à 00 h 24) ; `MODEL_CARD.md`, `doc/` |
-| 20-21 nov. 2026 | [`picogpt1-daisy`](https://github.com/nazimboudeffa/picogpt1-daisy), aujourd'hui [`picogpt-kit`](https://github.com/nazimboudeffa/picogpt-kit) | RAG, abstention, décodage anti-boucles, puis GPT-2 pré-entraîné 124 M | 6 commits à `320a572` ; `rag.py`, `knowledge.jsonl`, `train.py` |
+| 20-21 nov. 2026 | [`picogpt-kit`](https://github.com/nazimboudeffa/picogpt-kit) | RAG, abstention, décodage anti-boucles, puis GPT-2 pré-entraîné 124 M | 6 commits à `320a572` ; `rag.py`, `knowledge.jsonl`, `train.py` |
 | 2026 | [`picogpt-from-scratch-cookbook`](https://github.com/nazimboudeffa/picogpt-from-scratch-cookbook) | Ce livre : mise en récit et vérification des chiffres | `00-sommaire.md`, chapitres 01-04 |
 
 Le premier README cite *Attention Is All You Need*, l'article GPT-2 et

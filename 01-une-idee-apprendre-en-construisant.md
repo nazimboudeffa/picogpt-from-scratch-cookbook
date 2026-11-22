@@ -148,7 +148,7 @@ Le brouillon de ce livre décrivait un modèle de **6,86 millions de
 paramètres**, entraîné sur **745 exemples**, en **10 époques**, avec une loss
 finale d'environ **4,54**. Ces chiffres sont exacts — mais ils décrivent la
 première époque du projet, avant le 21 novembre 2026. Le `README.md` de
-`picogpt1-daisy` affichait encore les mêmes valeurs avant le commit `12c8df5`.
+`picogpt-kit` affichait encore les mêmes valeurs avant le commit `12c8df5`.
 
 Le 21 novembre, le projet change de stratégie : au lieu d'apprendre la langue
 depuis des poids aléatoires sur quelques milliers d'exemples, il part de

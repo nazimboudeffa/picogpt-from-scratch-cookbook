@@ -7,7 +7,7 @@ le prompt figé devient une saisie au clavier.*
 
 > **Nature du code.** Comme les annexes A et le chapitre 4, il s'agit d'un
 > **exemple pédagogique écrit pour ce livre**, et non d'un fichier de
-> `picogpt1-daisy`. La convention n° 1 du [sommaire](../00-sommaire.md) reste
+> `picogpt-kit`. La convention n° 1 du [sommaire](../00-sommaire.md) reste
 > respectée : le code du projet est étudié aux chapitres 5 à 12.
 
 ## B.1 Pourquoi un chat, et pourquoi maintenant

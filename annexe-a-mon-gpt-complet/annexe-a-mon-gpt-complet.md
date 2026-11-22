@@ -6,7 +6,7 @@ recopiée et exécutée.*
 
 > **Nature du code.** Comme dans le chapitre 4, il s'agit d'un **exemple
 > pédagogique écrit pour ce livre**, et non d'un fichier de
-> `picogpt1-daisy`. La convention n° 1 du [sommaire](../00-sommaire.md) reste
+> `picogpt-kit`. La convention n° 1 du [sommaire](../00-sommaire.md) reste
 > respectée : le code du projet est étudié aux chapitres 5 à 12.
 
 ## A.1 Mode d'emploi
@@ -34,7 +34,7 @@ Recopier ce fichier tel quel puis lancer :
 
 Le modèle part de poids aléatoires, apprend cinq phrases françaises par
 cœur, puis continue une phrase commençant par « la capitale de la france est ».
-Il s'agit d'une démonstration pédagogique : aucun code de picogpt1-daisy.
+Il s'agit d'une démonstration pédagogique : aucun code de `picogpt-kit`.
 """
 
 import torch                       # tenseurs, tirages aléatoires, optimiseurs

@@ -7,7 +7,7 @@ et il sait exactement ce qui, dans cette chaîne, sera délégué à Hugging Fac
 dans le projet réel.*
 
 > **Nature du code de cet atelier.** Les extraits des chapitres 1 à 3 sont
-> repris de `picogpt1-daisy`. Ceux-ci **ne le sont pas** : ils ont été écrits
+> repris de `picogpt-kit`. Ceux-ci **ne le sont pas** : ils ont été écrits
 > pour ce livre afin de rendre visible ce que `GPT2LMHeadModel` cache. Ils sont
 > présentés comme un **exemple pédagogique**, jamais comme du code du dépôt.
 > La convention n° 1 du [sommaire](00-sommaire.md) reste donc respectée : le
@@ -310,7 +310,7 @@ de `degres` uniquement parce qu'on a demandé 60 caractères.
 
 ## 4.8 Ce que l'atelier montre, et ce qu'il ne montre pas
 
-| | Cet atelier | `picogpt1-daisy` à `320a572` |
+| | Cet atelier | `picogpt-kit` à `320a572` |
 | --- | --- | --- |
 | Initialisation | Poids aléatoires | GPT-2 pré-entraîné (`--init pretrained`) |
 | Paramètres | 106 264 | 124 439 808 |
