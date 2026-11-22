@@ -12,9 +12,12 @@ aligné sur `320a572`, pas sur l'état courant (`71e30d9`, PicoGPT1-Iris 1.1.0).
 **Point d'entrée : [00-sommaire.md](00-sommaire.md)** — plan corrigé,
 généalogie des dépôts, chronologie des commits et conventions de rédaction.
 
-Le récit commence par le livre *LLMs from Scratch*, puis suit les dépôts
-`picogpt-python` (juin 2025), `picogpt1-scratch-python` (avril 2026),
-`picogpt1-jasmine` et `picogpt1-daisy` (novembre 2026).
+Le récit prend pour point de départ un ensemble de ressources d'apprentissage :
+le livre *LLMs from Scratch* de Sebastian Raschka, de nombreux articles (dont
+les références exactes n'ont pas toutes été conservées) et surtout des tutoriels
+YouTube. Il suit ensuite les dépôts `picogpt-python` (juin 2025),
+`picogpt1-scratch-python` (avril 2026), `picogpt1-jasmine` et `picogpt1-daisy`
+(novembre 2026).
 
 Chapitres déjà rédigés :
 

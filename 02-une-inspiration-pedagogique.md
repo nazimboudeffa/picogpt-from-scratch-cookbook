@@ -7,12 +7,14 @@ d'architecture plutôt que comme une recette tombée du ciel.*
 
 ------------------------------------------------------------------------
 
-## 2.1 Le cadre apporté par *LLMs from Scratch*
+## 2.1 Un cadre parmi d'autres : livres, articles et tutoriels
 
-C'est le point de départ déclaré du projet : le livre *LLMs from Scratch* de
-**Sebastian Raschka** et son dépôt
-[rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch). Selon
-l'auteur du projet, l'idée originale vient de là.
+Le livre *LLMs from Scratch* de **Sebastian Raschka** et son dépôt
+[rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) sont une
+référence déclarée du projet — mais pas la seule. L'apprentissage s'est aussi
+nourri de **nombreux articles** et, **surtout, de tutoriels YouTube**, dont
+l'auteur ne se souvient plus de tous les titres. Ce chapitre présente le cadre
+que le livre a contribué à donner, sans faire croire qu'il a tout apporté.
 
 Le livre accompagne le lecteur dans la construction progressive d'un modèle
 de langage de type GPT. Il aborde notamment :
@@ -63,9 +65,14 @@ proviennent des commits.
 
 Le premier README cite aussi *Attention Is All You Need*, l'article GPT-2 et
 [jaymody/picoGPT](https://github.com/jaymody/picoGPT). Celui d'avril 2026
-cite une vidéo et le dépôt
+mentionne une vidéo et le dépôt
 [hassanhabib/LLMfromNothing](https://github.com/hassanhabib/LLMfromNothing).
-Ces références s'ajoutent au livre de Raschka ; elles ne le remplacent pas.
+Ces traces confirment ce que récapitule le [chapitre 1](01-une-idee-apprendre-en-construisant.md) :
+à côté du livre de Raschka, il y a eu **beaucoup d'articles** — dont les
+références exactes ne sont plus toutes connues — et **des tutoriels YouTube**,
+qui ont pesé au moins autant dans la manière de voir le modèle se construire.
+Le livre n'est donc pas l'unique point de départ : c'est la référence écrite la
+plus clairement identifiée d'un parcours plus large.
 
 > **Décision éditoriale proposée — à confirmer par l'auteur.**
 > « PicoGPT » est un clin d'œil au petit GPT de jaymody, cité dans le premier
@@ -227,6 +234,9 @@ entrée, une sortie et une vérification possible.
 
 - **Comment le livre de Raschka a-t-il été découvert** (recommandation,
   recherche, cours) ? Quels chapitres ont été lus, et dans quel ordre ?
+- **Quels articles et quels tutoriels YouTube** ont accompagné cette lecture ?
+  Ceux dont tu te souviens encore peuvent être nommés ici ; les autres
+  resteront décrits sans titre plutôt que d'être inventés.
 - **Confirmer l'interprétation de « PicoGPT1 »** proposée plus haut. S'il y a
   une autre raison au « 1 », elle est à écrire ici.
 - Dans `picogpt-python`, qu'est-ce qui a été **reproduit fidèlement** du livre

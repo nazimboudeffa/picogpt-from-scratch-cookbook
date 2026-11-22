@@ -50,15 +50,18 @@ l'initialisation des poids du dernier entraînement. Les deux époques sont
 racontées dans le [chapitre 1](01-une-idee-apprendre-en-construisant.md) et
 le chapitre 8 (à écrire).
 
-### La généalogie : du livre aux premiers dépôts
+### La généalogie : des ressources d'apprentissage aux premiers dépôts
 
 Le brouillon ne disait presque rien de l'origine. Elle est pourtant essentielle
-pour comprendre le nom « PicoGPT1 » et le rôle de l'IA. La chronologie
-vérifiée est la suivante :
+pour comprendre le nom « PicoGPT1 » et le rôle de l'IA. Cette origine n'est pas
+un livre unique : elle mêle le livre de Raschka, **beaucoup d'articles** — dont
+l'auteur ne se souvient plus de tous les titres — et, **surtout, des tutoriels
+YouTube**. La chronologie vérifiée des dépôts est la suivante :
 
-| Date | Dépôt | Ce qui est appris ou construit | Lien |
+| Date | Dépôt / ressource | Ce qui est appris ou construit | Lien |
 | --- | --- | --- | --- |
-| source | *LLMs from Scratch*, S. Raschka | Le point de départ intellectuel : construire un GPT étape par étape | [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
+| source | *LLMs from Scratch*, S. Raschka | Une référence structurante : construire un GPT étape par étape | [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
+| source | Articles (références en partie oubliées) et tutoriels YouTube | L'autre versant — et le plus présent — de l'apprentissage : voir les mécanismes expliqués et le code se construire | à compléter si des titres sont retrouvés |
 | juin 2025 | `picogpt-python` | Première implémentation : attention multi-têtes, `LayerNorm`, `FeedForward` et `GPTModel` écrits à la main, tokenizer `tiktoken`, phrases anglaises simples, notebooks | [nazimboudeffa/picogpt-python](https://github.com/nazimboudeffa/picogpt-python) |
 | avril 2026 | `picogpt1-scratch-python` | Avec l'IA : premier modèle entraîné sur Alpaca, `Trainer` Hugging Face, 2 couches / 128 dimensions, conversion GGUF et Ollama | [nazimboudeffa/picogpt1-scratch-python](https://github.com/nazimboudeffa/picogpt1-scratch-python) |
 | 20 nov. 2026 | `picogpt1-jasmine` | Passage aux scripts Python, publication Hugging Face, documentation complète | [nazimboudeffa/picogpt1-jasmine](https://github.com/nazimboudeffa/picogpt1-jasmine) |
@@ -96,8 +99,9 @@ les ordres et les reprises.
 ### [Chapitre 1 — Une idée : apprendre en construisant](01-une-idee-apprendre-en-construisant.md) ✅ rédigé
 
 - La boîte noire des grands modèles et le choix d'un laboratoire réduit.
-- **L'origine réelle : le livre de Raschka, puis les dépôts `picogpt-python`
-  (juin 2025) et `picogpt1-scratch-python` (avril 2026).**
+- **L'origine réelle : le livre de Raschka, de nombreux articles et surtout des
+  tutoriels YouTube, puis les dépôts `picogpt-python` (juin 2025) et
+  `picogpt1-scratch-python` (avril 2026).**
 - La chaîne complète, du texte brut au chat navigateur : neuf étapes, treize
   fichiers, une question par étape.
 - Les deux époques du projet : 6,86 M pour la première architecture (2 couches
@@ -108,8 +112,8 @@ les ordres et les reprises.
 
 ### [Chapitre 2 — Une inspiration pédagogique](02-une-inspiration-pedagogique.md) ✅ rédigé
 
-- Ce que apporte *LLMs from Scratch* de Sebastian Raschka, et ce que le
-  projet n'en reprend pas.
+- Ce qu'apportent *LLMs from Scratch* de Sebastian Raschka, les articles lus et
+  les tutoriels YouTube, et ce que le projet ne reprend pas.
 - La généalogie complète en cinq dépôts, de l'attention écrite à la main en
   2025 au `Trainer` de 2026 ; ce que signifie « PicoGPT1 ».
 - La filiation `PicoGPT1-Jasmine` → `PicoGPT1-Daisy` documentée dans le
@@ -271,5 +275,6 @@ les ordres et les reprises.
 - [ ] Chapitres 5 à 13 et annexes C à G
 - [x] Relecture des extraits de code par rapport aux fichiers sources
 - [x] Édition figée sur `320a572` : corrections factuelles appliquées le 22 novembre 2026
-- [ ] Ajout des prompts réels dans le chapitre 3 et des souvenirs de development
+- [ ] Ajout des prompts réels dans le chapitre 3, des souvenirs de development
+  et des références d'articles / tutoriels YouTube retrouvées
 - [ ] Figer une édition destination publication
