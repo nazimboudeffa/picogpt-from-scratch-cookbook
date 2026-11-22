@@ -163,7 +163,7 @@ journalisée.
 +248/−106. Nouveau script `prepare_facts_dataset.py` (144 lignes), 197
 réponses directes, et surtout une **décision de retrait** dans `rag.py`.
 
-Le chapitre 9 détaillera le mécanisme. Ici, ce qui compte, c'est la méthode :
+Le chapitre 10 détaillera le mécanisme. Ici, ce qui compte, c'est la méthode :
 une technique sophistiquée a été enlevée parce qu'un test a montré qu'elle
 nuisait au résultat.
 
@@ -317,5 +317,7 @@ que vingt reconstitués.
   arbitrages ; l'IA est un partenaire de production, pas une source de
   vérité sur l'historique du projet.
 
-**Suite :** chapitre 4 (à écrire) — installer l'environnement et retrouver,
-sur sa propre machine, les versions et les fichiers décrits ici.
+**Suite :** chapitre 4 — atelier : écrire soi-même un GPT miniature pour
+voir ce que `GPT2LMHeadModel` délègue, puis chapitre 5 (à écrire) — installer
+l'environnement et retrouver, sur sa propre machine, les versions et les
+fichiers décrits ici.

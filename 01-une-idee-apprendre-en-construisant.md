@@ -118,7 +118,7 @@ base ne suffit pas : il faut régénérer les exemples, puis réentraîner.
 **Ensuite, le refus fait partie de l'apprentissage.** Le projet n'apprend pas
 seulement à répondre ; il apprend aussi à dire `Je ne sais pas.` lorsque la
 question sort du périmètre de la base. C'est l'un des apports les plus
-concrets de l'étape RAG (chapitre 9).
+concrets de l'étape RAG (chapitre 10).
 
 ------------------------------------------------------------------------
 
@@ -188,7 +188,7 @@ un entraînement naïf, puis comparer.
 La séquence complète tient en huit commandes dans le bloc ci-dessous. Le
 `doc/README.md` de `320a572` en affiche sept et présente `python serve.py`
 séparément. Elle suppose le dépôt cloné et l'environnement virtuel activé
-(chapitre 4).
+(chapitre 5).
 
 ```bash
 python -m pip install torch transformers datasets huggingface_hub scikit-learn

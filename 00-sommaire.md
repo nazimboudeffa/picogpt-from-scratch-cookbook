@@ -48,7 +48,7 @@ disponible avec `python train.py --init scratch`. Le titre du livre garde donc
 tout son sens — il désigne une **démarche d'apprentissage**, pas
 l'initialisation des poids du dernier entraînement. Les deux époques sont
 racontées dans le [chapitre 1](01-une-idee-apprendre-en-construisant.md) et
-le chapitre 7 (à écrire).
+le chapitre 8 (à écrire).
 
 ### La généalogie : du livre aux premiers dépôts
 
@@ -82,12 +82,12 @@ les ordres et les reprises.
 
 | Date | Commit | Message | Changement visible | Chapitre |
 | --- | --- | --- | --- | --- |
-| 20 nov. 2026 | `b5f05c6` | Renommage PicoGPT1-Daisy et decodage anti-boucles | État initial versionné : 31 fichiers, scripts + `doc/` + notebooks | 1, 3, 8 |
-| 20 nov. 2026 | `9884277` | Ajout du pipeline RAG et reduction des hallucinations | +947/−142 lignes ; `rag.py`, `evaluate.py`, `knowledge.jsonl`, `doc/12-rag.md` | 9, 10, 3 |
+| 20 nov. 2026 | `b5f05c6` | Renommage PicoGPT1-Daisy et decodage anti-boucles | État initial versionné : 31 fichiers, scripts + `doc/` + notebooks | 1, 3, 9 |
+| 20 nov. 2026 | `9884277` | Ajout du pipeline RAG et reduction des hallucinations | +947/−142 lignes ; `rag.py`, `evaluate.py`, `knowledge.jsonl`, `doc/12-rag.md` | 10, 11, 3 |
 | 20 nov. 2026 | `1c00747` | Documenter les differences avec PicoGPT1-Jasmine | `MODEL_CARD.md` +19 lignes : tableau comparatif | 2 |
-| 20 nov. 2026 | `66e4623` | Supprimer les notebooks obsolètes et nettoyer la documentation | −590 lignes (notebooks retirés) | 3, 4 |
-| 21 nov. 2026 | `12c8df5` | Passer a GPT-2 pre-entraine, ajouter le support GPU et regenerer la documentation | 17 fichiers, +328/−167 ; bascule `pretrained`, `--fp16`, doc régénérée | 7, 3 |
-| 21 nov. 2026 | `320a572` | Ajouter les reponses directes et fiabiliser le RAG | 16 fichiers, +248/−106 ; `prepare_facts_dataset.py`, contrainte de décodage abandonnée | 9, 3 |
+| 20 nov. 2026 | `66e4623` | Supprimer les notebooks obsolètes et nettoyer la documentation | −590 lignes (notebooks retirés) | 3, 5 |
+| 21 nov. 2026 | `12c8df5` | Passer a GPT-2 pre-entraine, ajouter le support GPU et regenerer la documentation | 17 fichiers, +328/−167 ; bascule `pretrained`, `--fp16`, doc régénérée | 8, 3 |
+| 21 nov. 2026 | `320a572` | Ajouter les reponses directes et fiabiliser le RAG | 16 fichiers, +248/−106 ; `prepare_facts_dataset.py`, contrainte de décodage abandonnée | 10, 3 |
 
 ------------------------------------------------------------------------
 
@@ -125,7 +125,20 @@ les ordres et les reprises.
   (contrainte abandonnée, beam search, erreurs TLS, etc.).
 - Modèle de fiche d'échange et zones explicitement laissées à compléter.
 
-### Chapitre 4 — Installer et reproduire l'environnement ✍️ à écrire
+### [Chapitre 4 — Atelier : de zéro à une première réponse](04-atelier-de-zero-a-une-reponse.md) ✅ rédigé
+
+- Un GPT miniature écrit à la main : tokenizer de caractères, lots décalés,
+  attention causale, deux blocs, `AdamW`, génération.
+- Six blocs de code à recopier dans un seul `mini_gpt.py` ; sortie vérifiée
+  (loss 3,287 → 0,064, Python 3.13.2 / `torch` 2.7.1).
+- Code **pédagogique écrit pour le livre**, explicitement distinct du code de
+  `picogpt1-daisy` (convention n° 1 ci-dessous).
+- Tableau de correspondance avec le projet réel : 106 264 paramètres contre
+  124 439 808, 24 caractères contre 50 257 tokens BPE.
+- Pourquoi un modèle sur cinq phrases mémorise et ne répond pas : ouverture
+  vers le préentraînement, le `Trainer` et le RAG.
+
+### Chapitre 5 — Installer et reproduire l'environnement ✍️ à écrire
 
 - Python 3.10+, testé en 3.13 sur Windows 11 ; `torch`, `transformers`,
   `datasets`, `huggingface_hub`, `scikit-learn`.
@@ -133,7 +146,7 @@ les ordres et les reprises.
 - Pourquoi les poids ne sont pas versionnés et les deux façons de repartir.
 - Sources : `doc/02-installation.md`, `README.md` §3-4, `.gitignore`.
 
-### Chapitre 5 — Préparer les données : trois scripts, trois jeux ✍️ à écrire
+### Chapitre 6 — Préparer les données : trois scripts, trois jeux ✍️ à écrire
 
 - `prepare_dataset.py` : Alpaca, filtres, déduplication, `BAD_PATTERNS`.
 - `knowledge.jsonl` : les 30 faits, le format `id`/`text`/`question`/`answer`.
@@ -142,28 +155,28 @@ les ordres et les reprises.
 - Format de bloc deux lignes et pourquoi le parseur est aussi strict.
 - Sources : les trois scripts, `doc/03-dataset.md`, `doc/12-rag.md`.
 
-### Chapitre 6 — Le format appris : tokenisation et masquage ✍️ à écrire
+### Chapitre 7 — Le format appris : tokenisation et masquage ✍️ à écrire
 
 - `build_example()` ligne à ligne : EOS, PAD, troncature à 256.
 - Pourquoi les tokens du prompt reçoivent `-100`.
 - Le `chat_template` sauvegardé et réutilisé dans le GGUF.
 - Sources : `train.py:53-66,138-148`, `doc/09-architecture.md`.
 
-### Chapitre 7 — Entraîner : deux époques du projet ✍️ à écrire
+### Chapitre 8 — Entraîner : deux époques du projet ✍️ à écrire
 
 - Mode `scratch` (4 couches / 256 dims / 4 têtes) versus mode `pretrained`.
 - Les options CLI, le `Trainer`, les checkpoints, la durée observée.
 - Comparer les deux jeux de résultats : 4,54 contre 1,05.
 - Sources : `train.py`, `doc/04-entrainement.md`, commit `12c8df5`.
 
-### Chapitre 8 — Générer : le modèle seul ✍️ à écrire
+### Chapitre 9 — Générer : le modèle seul ✍️ à écrire
 
 - `test.py`, `load_model()`, `generate()` pas à pas.
 - Le `\n` garanti, `StopAtNewline`, échantillonnage et anti-boucles.
 - Pièges : `generation_config.max_length`, décodage glouton, PowerShell.
 - Sources : `model_utils.py`, `test.py`, `doc/05-generation.md`.
 
-### Chapitre 9 — Ancrer : le pipeline RAG ✍️ à écrire
+### Chapitre 10 — Ancrer : le pipeline RAG ✍️ à écrire
 
 - TF-IDF sur caractères (`char_wb`, 3-5), indexation de `text + question`.
 - Seuil `DEFAULT_MIN_SCORE = 0.50`, construction du prompt, `is_supported()`.
@@ -171,14 +184,14 @@ les ordres et les reprises.
 - Ce que le GGUF contient et ne contient pas.
 - Sources : `rag.py`, `prepare_rag_dataset.py`, `doc/12-rag.md`, commit `320a572`.
 
-### Chapitre 10 — Évaluer sans se tromper soi-même ✍️ à écrire
+### Chapitre 11 — Évaluer sans se tromper soi-même ✍️ à écrire
 
 - `evaluate.py` : exactitude, ancrage, abstentions, retrieval.
 - Les résultats annoncés (30/30, 10/10) et leurs limites.
 - Pourquoi il n'y a pas de jeu de validation.
 - Sources : `evaluate.py`, `doc/12-rag.md`, `doc/11-limites.md`.
 
-### Chapitre 11 — Servir, exporter, publier ✍️ à écrire
+### Chapitre 12 — Servir, exporter, publier ✍️ à écrire
 
 - `serve.py` : API locale avec la bibliothèque standard, `POST /generate`.
 - `export_gguf.py` : convertisseur épinglé `b4000`, sortie F16.
@@ -186,7 +199,7 @@ les ordres et les reprises.
 - llama.app et le piège de la régénération du GGUF après réentraînement.
 - Sources : les trois scripts, `doc/06`, `07`, `08`, `MODEL_CARD.md`.
 
-### Chapitre 12 — Ce que le projet montre et ce qu'il ne montre pas ✍️ à écrire
+### Chapitre 13 — Ce que le projet montre et ce qu'il ne montre pas ✍️ à écrire
 
 - Forces : chaîne complète reproductible, abstention vérifiable.
 - Limites : base fermée, 256 tokens, pas de validation, GGUF sans RAG.
@@ -208,7 +221,9 @@ les ordres et les reprises.
 1. **Le code est réel.** Les extraits sont repris des fichiers de
    `picogpt1-daisy` ; les numéros de lignes indiqués permettent de les
    retrouver. Aucun code « d'illustration » n'est présenté comme du code du
-   projet.
+   projet. Seule exception explicitement signalée : le chapitre 4, où le
+   code pédagogique écrit pour le livre est présenté comme tel, sans jamais
+   être attribué au dépôt.
 2. **Les commandes sont exécutables telles quelles.** Quand une nuance
    Windows existe (PowerShell et le `\n` des prompts), elle est signalée
    dans un encadré.
@@ -231,11 +246,12 @@ les ordres et les reprises.
 | Ch. 1 « Une idée… » | Chapitre 1 |
 | Ch. 2 « Une inspiration… » | Chapitre 2 |
 | Ch. 3 « Programmer avec l'IA » | Chapitre 3 |
-| Ch. 4 « Préparer les données » | Chapitres 5 et 6 |
-| Ch. 5 « Entraîner un mini GPT » | Chapitre 7 |
-| Ch. 6 « Relier à une base… » | Chapitres 9 et 10 |
-| Ch. 7 « Passer du modèle à l'outil » | Chapitre 11 |
-| Ch. 8 « Ce que le projet montre… » | Chapitre 12 |
+| — (ajout pour le livre) | Chapitre 4 (atelier from scratch) |
+| Ch. 4 « Préparer les données » | Chapitres 6 et 7 |
+| Ch. 5 « Entraîner un mini GPT » | Chapitre 8 |
+| Ch. 6 « Relier à une base… » | Chapitres 10 et 11 |
+| Ch. 7 « Passer du modèle à l'outil » | Chapitre 12 |
+| Ch. 8 « Ce que le projet montre… » | Chapitre 13 |
 | Annexe « Carte du dépôt » | Annexe A |
 
 ------------------------------------------------------------------------
@@ -245,7 +261,8 @@ les ordres et les reprises.
 - [x] Sommaire corrigé et vérifié sur les sources
 - [x] Généalogie des cinq dépôts vérifiée (2025-2026)
 - [x] Chapitres 1, 2 et 3 (avec l'origine du projet)
-- [ ] Chapitres 4 à 12 et annexes
+- [x] Chapitre 4 (atelier : code pédagogique vérifié, six blocs exécutables)
+- [ ] Chapitres 5 à 13 et annexes
 - [x] Relecture des extraits de code par rapport aux fichiers sources
 - [x] Édition figée sur `320a572` : corrections factuelles appliquées le 22 novembre 2026
 - [ ] Ajout des prompts réels dans le chapitre 3 et des souvenirs de development

@@ -59,7 +59,7 @@ proviennent des commits.
 | 19 avr. 2026 | [`picogpt1-scratch-python`](https://github.com/nazimboudeffa/picogpt1-scratch-python) | Premier modèle entraîné : Alpaca, 2 couches / 128 dimensions, `Trainer`, GGUF et Ollama | 3 commits ; `train.ipynb` (452 lignes au HEAD, 458 au commit `b033165`), `PicoGPT1-Scratch/` |
 | 20-21 nov. 2026 | [`picogpt1-jasmine`](https://github.com/nazimboudeffa/picogpt1-jasmine) | Passage aux scripts Python, publication Hugging Face, documentation en 11 fiches + un index | 6 commits (le 6ᵉ le 21 nov. à 00 h 24) ; `MODEL_CARD.md`, `doc/` |
 | 20-21 nov. 2026 | [`picogpt1-daisy`](https://github.com/nazimboudeffa/picogpt1-daisy), aujourd'hui [`picogpt-kit`](https://github.com/nazimboudeffa/picogpt-kit) | RAG, abstention, décodage anti-boucles, puis GPT-2 pré-entraîné 124 M | 6 commits à `320a572` ; `rag.py`, `knowledge.jsonl`, `train.py` |
-| 2026 | [`picogpt-from-scratch-cookbook`](https://github.com/nazimboudeffa/picogpt-from-scratch-cookbook) | Ce livre : mise en récit et vérification des chiffres | `00-sommaire.md`, chapitres 01-03 |
+| 2026 | [`picogpt-from-scratch-cookbook`](https://github.com/nazimboudeffa/picogpt-from-scratch-cookbook) | Ce livre : mise en récit et vérification des chiffres | `00-sommaire.md`, chapitres 01-04 |
 
 Le premier README cite aussi *Attention Is All You Need*, l'article GPT-2 et
 [jaymody/picoGPT](https://github.com/jaymody/picoGPT). Celui d'avril 2026
@@ -173,7 +173,7 @@ Commentaire ligne par ligne :
 1. **`text = f"{prompt}\n{completion}{tokenizer.eos_token}"`** — l'exemple appris est une
    seule chaîne : le prompt, un saut de ligne, la réponse, puis le token de fin
    `<|endoftext|>`. Le saut de ligne est donc **fourni**, pas généré. C'est
-   pour cela que `generate()` devra l'ajouter plus tard (chapitre 8).
+   pour cela que `generate()` devra l'ajouter plus tard (chapitre 9).
 2. **`truncation=True, max_length=256`** — au-delà de 256 tokens, l'exemple
    est coupé. Comme le modèle hérite de 1 024 positions, les positions
    supplémentaires existent mais ne sont jamais utilisées en entraînement.

@@ -21,6 +21,7 @@ Chapitres déjà rédigés :
 1. [Une idée : apprendre en construisant](01-une-idee-apprendre-en-construisant.md)
 2. [Une inspiration pédagogique](02-une-inspiration-pedagogique.md)
 3. [Programmer avec l'aide de l'IA](03-programmer-avec-l-aide-de-l-ia.md)
+4. [Atelier : de zéro à une première réponse](04-atelier-de-zero-a-une-reponse.md)
 
 Les autres chapitres sont annoncés dans le sommaire et restent à écrire.
 
