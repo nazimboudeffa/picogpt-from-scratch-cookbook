@@ -12,6 +12,10 @@ aligné sur `320a572`, pas sur l'état courant (`71e30d9`, PicoGPT1-Iris 1.1.0).
 **Point d'entrée : [00-sommaire.md](00-sommaire.md)** — plan corrigé,
 généalogie des dépôts, chronologie des commits et conventions de rédaction.
 
+Ce manuscrit est relu et corrigé avec **OpenCode** (modèle **Big Pickle**), qui
+sert aussi au développement courant de `picogpt-kit` ; le chapitre 3 précise ce
+rôle par rapport aux outils utilisés en 2025 et 2026.
+
 Le récit prend pour point de départ un ensemble de ressources d'apprentissage :
 le **code open source** de
 [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) — le livre

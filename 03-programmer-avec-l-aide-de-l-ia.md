@@ -2,7 +2,7 @@
 
 *Ce chapitre répond à la question : comment raconter honnêtement une
 collaboration avec l'IA quand les prompts exacts n'ont pas été conservés ? À
-la fin, le lecteur dispose d'une méthode de documentation et de sept zones à
+la fin, le lecteur dispose d'une méthode de documentation et de huit zones à
 compléter avec ses propres souvenirs.*
 
 > **Avertissement méthodologique**
@@ -289,7 +289,29 @@ largement visible.
 
 ------------------------------------------------------------------------
 
-## 3.5 Modèle de fiche d'échange
+## 3.5 Novembre 2026 — OpenCode et Big Pickle
+
+La relecture de ce livre **et le développement courant de `picogpt-kit`** se
+font dans **OpenCode**, un agent de programmation en ligne de commande, avec le
+modèle **Big Pickle**. Ce n'est ni ChatGPT ni l'assistant anonyme d'avril 2026 :
+c'est un troisième outil, avec un troisième rôle.
+
+Pour le manuscrit, il a servi à vérifier les affirmations contre les dépôts
+réels, à corriger le récit (origine du projet, licences, chronologie), puis à
+committer et pousser les changements. Pour `picogpt-kit`, il assiste le
+développement en cours, postérieur à l'état figé `320a572` décrit ici : le livre
+s'arrête à une photographie, alors que l'outil continue de travailler sur la
+suite.
+
+Comme les échanges de 2025 ou d'avril 2026, ces conversations ne sont pas
+conservées dans Git. Seuls les artefacts — commits, fichiers, sorties de
+commandes — permettent de les reconstituer. La règle du chapitre reste donc la
+même : ne pas inventer de prompts, distinguer ce qui est attesté de ce qui est
+rappelé.
+
+------------------------------------------------------------------------
+
+## 3.6 Modèle de fiche d'échange
 
 Pour compléter ce chapitre sans rien inventer, recopier le modèle suivant
 pour chaque échange dont tu te souviens :
@@ -308,14 +330,17 @@ pour chaque échange dont tu te souviens :
 - **Leçon :** une phrase que tu pourrais redire à un lecteur
 ```
 
-Les sept emplacements à remplir ont été signalés dans la section 3.2. Il n'est
+Les huit emplacements à remplir ont été signalés dans la section 3.2. Il n'est
 pas nécessaire d'être exhaustif : trois échanges bien documentés valent mieux
 que vingt reconstitués.
 
 ------------------------------------------------------------------------
 
-## 3.6 Ce qu'il faut retenir
+## 3.7 Ce qu'il faut retenir
 
+- Trois outils, trois rôles : ChatGPT pour comprendre le code (2025), l'IA
+  d'avril 2026 pour produire, OpenCode + Big Pickle pour éditer ce livre et
+  développer `picogpt-kit` (novembre 2026).
 - L'historique Git donne la **chronologie des décisions**, pas celle des
   conversations. Les deux ne doivent pas être confondues.
 - Les commits racontent une progression nette : stabiliser le décodage →

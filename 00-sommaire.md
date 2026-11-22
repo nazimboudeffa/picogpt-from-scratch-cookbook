@@ -132,6 +132,8 @@ les ordres et les reprises.
 - Méthode : définir un objectif, examiner une proposition, tester, corriger.
 - ChatGPT comme aide à la compréhension du code dès 2025, puis comme partenaire
   de production à partir d'avril 2026.
+- OpenCode avec le modèle **Big Pickle**, pour ce manuscrit et le développement
+  courant de `picogpt-kit` (novembre 2026).
 - Les six commits racontés comme une suite de décisions.
 - Les « traces de décisions » laissées dans les commentaires du code
   (contrainte abandonnée, beam search, erreurs TLS, etc.).
