@@ -23,11 +23,11 @@ tutoriels YouTube. Il suit ensuite les dépôts `picogpt-python` (juin 2025),
 
 ## Licences et sources
 
-- Le manuscrit de ce dépôt est publié sous **Apache-2.0** (voir `LICENSE`,
-  Copyright © 2026 Nazim Boudeffa). Les versions déjà diffusées sous CC0 1.0 le
-  restent : la renonciation CC0 étant irrévocable, ce changement vaut pour la
-  version présente et les suivantes. Apache-2.0 demande à toute personne qui
-  redistribue le livre de conserver les avis de copyright, de fournir un
+- Le manuscrit de ce dépôt est publié sous **Apache-2.0** (voir `LICENSE`, texte
+  générique sans nom de titulaire renseigné). Les versions déjà diffusées sous
+  CC0 1.0 le restent : la renonciation CC0 étant irrévocable, ce changement vaut
+  pour la version présente et les suivantes. Apache-2.0 demande à toute personne
+  qui redistribue le livre de conserver les avis de copyright, de fournir un
   exemplaire de la licence et de signaler les fichiers modifiés.
 - Le code de référence
   [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) est sous
