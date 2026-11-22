@@ -25,7 +25,7 @@ références exactes n'ont pas toutes été conservées) et surtout des tutoriel
 YouTube, dont celui de
 [Andrej Karpathy](https://www.youtube.com/watch?v=kCc8FmEb1nY). Il suit ensuite
 les dépôts `picogpt-python` (juin 2025), `picogpt1-scratch-python` (avril 2026),
-`picogpt1-jasmine` et `picogpt1-daisy` (novembre 2026).
+`picogpt1-jasmine` et `picogpt-kit` (novembre 2026).
 
 ## Articles, documentation et vidéo
 
